@@ -29,28 +29,30 @@ export default function Home() {
          </div>
          <nav className="px-5 py-7 mx-auto max-w-7xl text-accent flex items-center space-x-4">
             <BiSearch size={30}/>
-            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white border border-accent">
                <IoLogoFirebase size={22}/>
             </div>
-            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white border border-accent">
                <IoLogoReact size={22}/>
             </div>
-            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white border border-accent">
                <IoLogoVue size={22}/>
             </div>
-            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white border border-accent">
                <SiSolidity size={22}/>
             </div>
-            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white border border-accent">
                <SiNextdotjs size={22}/>
             </div>
-            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white border border-accent">
                <SiTypescript size={22}/>
             </div>
          </nav>
          <main className="grid grid-cols-4 mb-4 gap-6 px-5 mx-auto max-w-7xl">
-            {data.map(d=>(
-               <ProjectCard/>
+            {data.map((d, i)=>(
+               <ProjectCard
+                  key={i}
+               />
             ))}
          </main>
       </div>
