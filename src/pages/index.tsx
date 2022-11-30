@@ -1,7 +1,17 @@
 import Head from "next/head"
 import { IoIosClose } from "react-icons/io"
+import ProjectCard from "../components/ProjectCard"
 
 export default function Home() {
+   const data = [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+   ]
    return (
       <div>
          <Head>
@@ -14,6 +24,11 @@ export default function Home() {
             <p className="mb-0.5">Dear stranger,</p>
             <p>Welcome to my portfolio website. Feel free to look around. You can use the filter buttons below this message to... well to filter out projects.</p>
          </div>
+         <main className="grid grid-cols-4 my-4 gap-3 p-5 mx-auto max-w-7xl">
+            {data.map(d=>(
+               <ProjectCard/>
+            ))}
+         </main>
       </div>
    )
 }
