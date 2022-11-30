@@ -24,7 +24,7 @@ export default function Home() {
             <p className="mb-0.5">Dear stranger,</p>
             <p>Welcome to my portfolio website. Feel free to look around. You can use the filter buttons below this message to... well to filter out projects.</p>
          </div>
-         <main className="grid grid-cols-4 my-4 gap-3 p-5 mx-auto max-w-7xl">
+         <main className="grid grid-cols-4 my-4 gap-5 p-5 mx-auto max-w-7xl">
             {data.map(d=>(
                <ProjectCard/>
             ))}
