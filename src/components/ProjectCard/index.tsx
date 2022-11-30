@@ -6,7 +6,7 @@ const ProjectCard = () => {
          <div 
             className="relative"
             style={{
-               paddingBottom: "120%"
+               paddingBottom: "110%"
             }}
          >
             <div className="absolute inset-0 flex flex-col justify-between">
