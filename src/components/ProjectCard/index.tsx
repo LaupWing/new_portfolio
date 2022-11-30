@@ -10,7 +10,7 @@ const ProjectCard = () => {
                paddingBottom: "115%",
             }}
          >
-            <div className="absolute inset-0 flex flex-col justify-between">
+            <div className="absolute inset-0 duration-500 hover:blur-md flex flex-col justify-between">
                <div className="flex items-start justify-between">
                   <div className="flex">
                      <div className="w-8 h-8 flex justify-center items-center border-2 border-accent bg-white rounded-full">
