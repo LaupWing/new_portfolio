@@ -28,9 +28,15 @@ export default function Home() {
          </div>
          <nav className="px-5 mx-auto max-w-7xl text-accent my-2 flex items-center space-x-4">
             <BiSearch size={30}/>
-            <IoLogoFirebase size={22}/>
-            <IoLogoReact size={22}/>
-            <IoLogoVue size={22}/>
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+               <IoLogoFirebase size={22}/>
+            </div>
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+               <IoLogoReact size={22}/>
+            </div>
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+               <IoLogoVue size={22}/>
+            </div>
          </nav>
          <main className="grid grid-cols-4 mb-4 gap-5 p-5 mx-auto max-w-7xl">
             {data.map(d=>(
