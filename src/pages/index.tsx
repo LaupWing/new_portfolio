@@ -1,5 +1,6 @@
 import Head from "next/head"
 import { IoIosClose } from "react-icons/io"
+import { BiSearch } from "react-icons/bi"
 import ProjectCard from "../components/ProjectCard"
 
 export default function Home() {
@@ -24,7 +25,10 @@ export default function Home() {
             <p className="mb-0.5">Dear stranger,</p>
             <p>Welcome to my portfolio website. Feel free to look around. You can use the filter buttons below this message to... well to filter out projects.</p>
          </div>
-         <main className="grid grid-cols-4 my-4 gap-5 p-5 mx-auto max-w-7xl">
+         <nav className="px-5 mx-auto max-w-7xl text-accent my-2">
+            <BiSearch size={30}/>
+         </nav>
+         <main className="grid grid-cols-4 mb-4 gap-5 p-5 mx-auto max-w-7xl">
             {data.map(d=>(
                <ProjectCard/>
             ))}

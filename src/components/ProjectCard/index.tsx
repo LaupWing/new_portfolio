@@ -7,7 +7,7 @@ const ProjectCard = () => {
          <div
             className="relative"
             style={{
-               paddingBottom: "110%",
+               paddingBottom: "115%",
             }}
          >
             <div className="absolute inset-0 flex flex-col justify-between">
@@ -25,7 +25,7 @@ const ProjectCard = () => {
                <h1 className="font-serif text-xl tracking-wider">
                   ProjectCard
                </h1>
-               <p className="text-xs mt-1">
+               <p className="text-xs mt-1 line-clamp-3">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
                   sit doloribus ab ipsa maiores ad dolorum.
                </p>
