@@ -3,7 +3,7 @@ import { IoIosClose } from "react-icons/io"
 import { BiSearch } from "react-icons/bi"
 import ProjectCard from "../components/ProjectCard"
 import { IoLogoFirebase, IoLogoReact, IoLogoVue } from "react-icons/io5"
-import { SiSolidity, SiNextdotjs } from "react-icons/si"
+import { SiSolidity, SiNextdotjs, SiTypescript } from "react-icons/si"
 
 export default function Home() {
    const data = [
@@ -27,7 +27,7 @@ export default function Home() {
             <p className="mb-0.5">Dear stranger,</p>
             <p>Welcome to my portfolio website. Feel free to look around. You can use the filter buttons below this message to... well to filter out projects.</p>
          </div>
-         <nav className="px-5 mx-auto max-w-7xl text-accent my-2 flex items-center space-x-4">
+         <nav className="px-5 py-7 mx-auto max-w-7xl text-accent flex items-center space-x-4">
             <BiSearch size={30}/>
             <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
                <IoLogoFirebase size={22}/>
@@ -44,8 +44,11 @@ export default function Home() {
             <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
                <SiNextdotjs size={22}/>
             </div>
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+               <SiTypescript size={22}/>
+            </div>
          </nav>
-         <main className="grid grid-cols-4 mb-4 gap-6 p-5 mx-auto max-w-7xl">
+         <main className="grid grid-cols-4 mb-4 gap-6 px-5 mx-auto max-w-7xl">
             {data.map(d=>(
                <ProjectCard/>
             ))}
