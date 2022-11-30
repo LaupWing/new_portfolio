@@ -3,6 +3,7 @@ import { IoIosClose } from "react-icons/io"
 import { BiSearch } from "react-icons/bi"
 import ProjectCard from "../components/ProjectCard"
 import { IoLogoFirebase, IoLogoReact, IoLogoVue } from "react-icons/io5"
+import { SiSolidity, SiNextdotjs } from "react-icons/si"
 
 export default function Home() {
    const data = [
@@ -37,8 +38,14 @@ export default function Home() {
             <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
                <IoLogoVue size={22}/>
             </div>
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+               <SiSolidity size={22}/>
+            </div>
+            <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white">
+               <SiNextdotjs size={22}/>
+            </div>
          </nav>
-         <main className="grid grid-cols-4 mb-4 gap-5 p-5 mx-auto max-w-7xl">
+         <main className="grid grid-cols-4 mb-4 gap-6 p-5 mx-auto max-w-7xl">
             {data.map(d=>(
                <ProjectCard/>
             ))}

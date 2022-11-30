@@ -11,16 +11,20 @@ const ProjectCard = () => {
             }}
          >
             <div className="absolute inset-0 flex flex-col justify-between">
-               <div className="flex">
-                  <div className="w-8 h-8 flex justify-center items-center border-2 border-accent bg-white rounded-full">
-                     <IoLogoVue className="text-background-secundair" size={20}/>
+               <div className="flex items-start justify-between">
+                  <div className="flex">
+                     <div className="w-8 h-8 flex justify-center items-center border-2 border-accent bg-white rounded-full">
+                        <IoLogoVue className="text-background-secundair" size={20}/>
+                     </div>
+                     <div className="w-8 h-8 flex justify-center items-center border-2 border-accent bg-white rounded-full transform -translate-x-2">
+                        <IoLogoReact className="text-background-secundair" size={20}/>
+                     </div>
+                     <div className="w-8 h-8 flex justify-center items-center border-2 border-accent bg-white rounded-full transform -translate-x-4">
+                        <IoLogoFirebase className="text-background-secundair" size={20}/>
+                     </div>
                   </div>
-                  <div className="w-8 h-8 flex justify-center items-center border-2 border-accent bg-white rounded-full transform -translate-x-2">
-                     <IoLogoReact className="text-background-secundair" size={20}/>
-                  </div>
-                  <div className="w-8 h-8 flex justify-center items-center border-2 border-accent bg-white rounded-full transform -translate-x-4">
-                     <IoLogoFirebase className="text-background-secundair" size={20}/>
-                  </div>
+                  {/* <p className="text-sm bg-indigo-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">tutorial</p> */}
+                  <p className="text-sm bg-teal-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">Self</p>
                </div>
                <h1 className="font-serif text-xl tracking-wider">
                   ProjectCard
