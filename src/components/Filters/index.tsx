@@ -47,7 +47,7 @@ const Filters = () => {
    ] 
 
    return (
-      <nav className="px-5 py-7 mx-auto max-w-7xl text-accent flex items-center space-x-4">
+      <nav className="px-5 py-7 max-w-7xl text-accent flex items-center space-x-4">
          <BiSearch size={30}/>
          {skills.map(skill=>(
             <SkillCmp
