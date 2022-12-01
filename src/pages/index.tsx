@@ -87,7 +87,6 @@ export default function Home() {
             setShowSelf={setShowSelf}
             setShowTutorial={setShowTutorial}
             toggle={(skill: string)=>{
-               console.log(skill)
                setFilters(prev => prev.map(p => p.name === skill 
                   ? {
                      ...p,

@@ -17,6 +17,7 @@ const Filters:FC<Props> = ({
    toggle, 
    showSelf, 
    setShowSelf, 
+   showTutorial,
    setShowTutorial 
 }) => {
    
@@ -40,7 +41,12 @@ const Filters:FC<Props> = ({
          >
             Self
          </button>
-         <button className="text-sm bg-indigo-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">tutorial</button>
+         <button 
+            className={"text-sm duration-200 rounded-full w-20 text-center py-0.5 uppercase border-2 border-indigo-500 font-bold font-serif tracking-widest " + (showTutorial ? "bg-indigo-500 text-white" : "text-indigo-500 opacity-30")}
+            onClick={()=> setShowTutorial(prev => !prev)}
+         >
+            tutorial
+         </button>
       </nav>
    )
 }
