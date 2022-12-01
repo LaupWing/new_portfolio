@@ -1,5 +1,5 @@
 export enum Icons {
-   "firbase" =  "IoLogoFirebase",  
+   "firebase" =  "IoLogoFirebase",  
    "react" = "IoLogoReact" , 
    "vue" = "IoLogoVue", 
    "solidity" = "SiSolidity", 
