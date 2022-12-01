@@ -1,4 +1,4 @@
-import { IoLogoFirebase, IoLogoReact, IoLogoVue } from "react-icons/io5"
+import { IoLogoFirebase, IoLogoReact, IoLogoVue, IoLogoCss3 } from "react-icons/io5"
 import { SiSolidity, SiNextdotjs, SiTypescript } from "react-icons/si"
 
 export default {
@@ -8,4 +8,5 @@ export default {
    SiSolidity,
    SiNextdotjs,
    SiTypescript,
+   IoLogoCss3
 }

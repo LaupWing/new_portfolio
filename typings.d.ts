@@ -4,6 +4,7 @@ export enum Icons {
    "vue" = "IoLogoVue", 
    "solidity" = "SiSolidity", 
    "nextjs" = "SiNextdotjs",
+   "css" = "IoLogoCss3",
    "typescript" = "SiTypescript"
 }
 export type skills = keyof typeof Icons

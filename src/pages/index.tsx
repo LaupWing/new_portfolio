@@ -11,7 +11,8 @@ export enum Icons {
    "vue" = "IoLogoVue", 
    "solidity" = "SiSolidity", 
    "nextjs" = "SiNextdotjs",
-   "typescript" = "SiTypescript"
+   "typescript" = "SiTypescript",
+   "css" = "IoLogoCss3"
 }
 
 
@@ -36,6 +37,11 @@ export default function Home() {
          active: true,
          icon: Icons.solidity,
          name: "solidity"
+      },
+      {
+         active: true,
+         icon: Icons.css,
+         name: "css"
       },
       {
          active: true,
