@@ -12,7 +12,7 @@ const Skill:FC<Props> = ({ icon, active, onClick }) => {
 
    return (
       <div 
-         className={"h-10 w-10 rounded-full flex items-center justify-center text-white border border-accent " + (active ? "gradient-animation" : "opacity-30")}
+         className={"h-10 w-10 rounded-full cursor-pointer duration-200 flex items-center justify-center text-white border border-accent " + (active ? "gradient-animation" : "opacity-30")}
          onClick={onClick}
       >
          <Icon size={22}/>
