@@ -1,5 +1,5 @@
 import React from "react"
-import { BiSearch } from "react-icons/bi"
+import { BiBomb, BiSearch } from "react-icons/bi"
 import { Skill } from "typings"
 import SkillCmp from "./Skill"
 
@@ -49,7 +49,8 @@ const Filters = () => {
 
    return (
       <nav className="px-5 py-7 max-w-7xl text-accent flex items-center space-x-4">
-         <BiSearch size={30}/>
+         <BiSearch size={35}/>
+         <BiBomb size={35}/>
          {skills.map(skill=>(
             <SkillCmp
                key={skill.name}
