@@ -3,6 +3,7 @@ import { BiSearch } from "react-icons/bi"
 import { Skill } from "typings"
 import SkillCmp from "./Skill"
 
+// Also available in the typings file
 export enum Icons {
    "firebase" =  "IoLogoFirebase",  
    "react" = "IoLogoReact" , 
@@ -56,6 +57,8 @@ const Filters = () => {
                active={skill.active}
             />
          ))}
+         <button className="text-sm bg-teal-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">Self</button>
+         <button className="text-sm bg-indigo-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">tutorial</button>
       </nav>
    )
 }
