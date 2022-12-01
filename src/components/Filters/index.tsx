@@ -1,10 +1,26 @@
 import React from "react"
 import { BiSearch } from "react-icons/bi"
-import { Icons, Skill } from "../../../typings"
+// import { Icons, Skill } from "../../../typings"
 import SkillCmp from "./Skill"
 
+export enum Icons {
+   "firebase" =  "IoLogoFirebase",  
+   "react" = "IoLogoReact" , 
+   "vue" = "IoLogoVue", 
+   "solidity" = "SiSolidity", 
+   "nextjs" = "SiNextdotjs",
+   "typescript" = "SiTypescript"
+}
+export type skills = keyof typeof Icons
+
+export interface Skill {
+   icon: Icons
+   name: skills
+   active: boolean
+}
+
 const Filters = () => {
-   const skills:Skill[] = [
+   const skills = [
       {
          active: true,
          icon: Icons.firebase,
