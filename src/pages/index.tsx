@@ -54,6 +54,9 @@ export default function Home() {
          name: "vue"
       },
    ])
+   const [showSelf, setShowSelf] = useState(true) 
+   const [showTutorial, setShowTutorial] = useState(true) 
+
 
    const data = [
       1,
@@ -79,6 +82,10 @@ export default function Home() {
          </div>
          <Filters
             skills={filters}
+            showSelf={showSelf}
+            showTutorial={showTutorial}
+            setShowSelf={setShowSelf}
+            setShowTutorial={setShowTutorial}
             toggle={(skill: string)=>{
                console.log(skill)
                setFilters(prev => prev.map(p => p.name === skill 
