@@ -6,10 +6,10 @@ export enum Icons {
    "nextjs" = "SiNextdotjs",
    "typescript" = "SiTypescript"
 }
-export type skills = "firebase" | "react" | "vue" | "solidity" | "nextjs" | "typescript"
+export type skills = keyof typeof Icons
 
 export interface Skill {
-   icon: icons
-   name: string
+   icon: Icons
+   name: skills
    active: boolean
 }
