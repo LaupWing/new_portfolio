@@ -26,7 +26,7 @@ const Filters = () => {
          name: "nextjs"
       },
       {
-         active: true,
+         active: false,
          icon: Icons.react,
          name: "react"
       },
@@ -41,7 +41,7 @@ const Filters = () => {
          name: "typescript"
       },
       {
-         active: true,
+         active: false,
          icon: Icons.vue,
          name: "vue"
       },

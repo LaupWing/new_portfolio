@@ -6,11 +6,11 @@ interface Props {
    active: boolean
 }
 
-const Skill:FC<Props> = ({ icon }) => {
+const Skill:FC<Props> = ({ icon, active }) => {
    const Icon = (icons as any)[icon]
 
    return (
-      <div className="bg-white h-10 w-10 rounded-full flex items-center justify-center gradient-animation text-white border border-accent">
+      <div className={"h-10 w-10 rounded-full flex items-center justify-center text-white border border-accent " + (active ? "gradient-animation" : "opacity-30")}>
          <Icon size={22}/>
       </div>
    )
