@@ -1,12 +1,54 @@
 import Head from "next/head"
 import { IoIosClose } from "react-icons/io"
-import { BiSearch } from "react-icons/bi"
 import ProjectCard from "../components/ProjectCard"
-import { IoLogoFirebase, IoLogoReact, IoLogoVue } from "react-icons/io5"
-import { SiSolidity, SiNextdotjs, SiTypescript } from "react-icons/si"
 import Filters from "../components/Filters"
+import { Skill } from "typings"
+import { useState } from "react"
+
+export enum Icons {
+   "firebase" =  "IoLogoFirebase",  
+   "react" = "IoLogoReact" , 
+   "vue" = "IoLogoVue", 
+   "solidity" = "SiSolidity", 
+   "nextjs" = "SiNextdotjs",
+   "typescript" = "SiTypescript"
+}
+
 
 export default function Home() {
+   const [filters, setFilters] = useState<Skill[]>([
+      {
+         active: true,
+         icon: Icons.firebase,
+         name: "firebase"
+      },
+      {
+         active: true,
+         icon: Icons.nextjs,
+         name: "nextjs"
+      },
+      {
+         active: true,
+         icon: Icons.react,
+         name: "react"
+      },
+      {
+         active: true,
+         icon: Icons.solidity,
+         name: "solidity"
+      },
+      {
+         active: true,
+         icon: Icons.typescript,
+         name: "typescript"
+      },
+      {
+         active: true,
+         icon: Icons.vue,
+         name: "vue"
+      },
+   ])
+
    const data = [
       1,
       2,
@@ -29,7 +71,20 @@ export default function Home() {
             <p>Welcome to my portfolio website. Feel free to look around. You can use the filter buttons below this message to... well to filter out projects.</p>
             <button className="border duration-200 border-accent  ml-auto mt-2 rounded px-2 uppercase text-sm font-bold py-1 hover:bg-pink-500 hover:text-white">Dont show</button>
          </div>
-         <Filters/>
+         <Filters
+            skills={filters}
+            toggle={(skill: string)=>{
+               console.log(skill)
+               setFilters(prev => prev.map(p => p.name === skill 
+                  ? {
+                     ...p,
+                     active: !p.active
+                  }
+                  : {
+                     ...p
+                  }))
+            }}
+         />
          <main className="grid grid-cols-4 w-full mb-10 gap-6 px-5 mx-auto max-w-7xl">
             {data.map((d, i)=>(
                <ProjectCard
