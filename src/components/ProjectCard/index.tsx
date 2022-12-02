@@ -8,6 +8,7 @@ interface Props {
 }
 
 const ProjectCard:React.FC<Props> = ({ skills }) => {
+   console.log(skills)
    return (
       <div className="bg-background-secundair p-4 border-accent border text-accent rounded-2xl">
          <div
@@ -19,11 +20,12 @@ const ProjectCard:React.FC<Props> = ({ skills }) => {
             <div className="absolute inset-0 duration-500 hover:blur-md flex flex-col justify-between">
                <div className="flex items-start justify-between">
                   <div className="flex">
-                     {/* {skills.map(s => (
+                     {skills.map((s, i) => (
                         <Skill
-                           icon={s}
+                           index={i}
+                           name={s}
                         />
-                     ))} */}
+                     ))}
                   </div>
                   {/* <p className="text-sm bg-indigo-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">tutorial</p> */}
                   <p className="text-sm bg-teal-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">Self</p>
