@@ -1,23 +1,6 @@
-export enum Icons {
-   "firebase" =  "IoLogoFirebase",  
-   "react" = "IoLogoReact" , 
-   "vue" = "IoLogoVue", 
-   "solidity" = "SiSolidity", 
-   "nextjs" = "SiNextdotjs",
-   "css" = "IoLogoCss3",
-   "typescript" = "SiTypescript"
-}
+import Icons from "./src/utils/icons"
 
-export type SkillIcons = {
-   "firebase" :  "IoLogoFirebase",  
-   "react" : "IoLogoReact" , 
-   "vue" : "IoLogoVue", 
-   "solidity" : "SiSolidity", 
-   "nextjs" : "SiNextdotjs",
-   "css" : "IoLogoCss3",
-   "typescript" : "SiTypescript"
-}
-export type Skills = keyof typeof Icons
+export type SkillIcons = keyof typeof Icons
 
 export interface Skill {
    icon: Icons

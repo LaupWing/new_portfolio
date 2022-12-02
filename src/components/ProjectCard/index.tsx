@@ -1,10 +1,10 @@
 import React from "react"
 import { IoLogoFirebase, IoLogoReact, IoLogoVue } from "react-icons/io5"
-import { Skills } from "typings"
+import { SkillIcons } from "typings"
 import Skill from "./Skill"
 
 interface Props {
-   skills: Skills[]
+   skills: SkillIcons[]
 }
 
 const ProjectCard:React.FC<Props> = ({ skills }) => {
