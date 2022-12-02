@@ -1,5 +1,5 @@
-import React, { FC, lazy } from "react"
-import icons from "./icons"
+import React, { FC } from "react"
+import icons from "src/utils/icons"
 
 interface Props {
    icon: string,
