@@ -31,5 +31,4 @@ export interface Project {
    description: string
    tutorial: boolean
    image: string
-
 }
