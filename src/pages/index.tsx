@@ -46,7 +46,7 @@ export default function Home() {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css", "firebase"]
+         skills: ["css", "firebase", "react"]
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
