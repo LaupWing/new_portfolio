@@ -6,16 +6,31 @@ const Overlay = () => {
    return (
       <motion.div
          whileHover={{
-            scale: [0, 1]
+            opacity: [0, 1]
          }}
          transition={{
             duration: 0.25,
             ease: "easeInOut",
-            staggerChildren: 0.5
+            staggerChildren: 0.5,
+            delayChildren: 0.5
          }}
-         className="inset-0 absolute opacity-0"
+         className="inset-0 absolute opacity-0 z-50 bg-white"
       >
          <AiFillEye className="text-orange-400"/>
+         <motion.div
+               whileHover={{
+                  scale: [1, 0.9],
+               }}
+               whileInView={{
+                  scale: [1, 1.1],
+               }}
+               transition={{
+                  duration: 0.25,
+               }}
+               className="app__flex"
+            >
+               <AiFillEye />
+            </motion.div>
       </motion.div>
    )
 }
