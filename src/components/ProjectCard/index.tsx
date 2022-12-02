@@ -5,9 +5,10 @@ import Skill from "./Skill"
 
 interface Props {
    skills: Skills[]
+   tutorial: boolean
 }
 
-const ProjectCard:React.FC<Props> = ({ skills }) => {
+const ProjectCard:React.FC<Props> = ({ skills, tutorial }) => {
    return (
       <div className="bg-background-secundair p-4 border-accent border text-accent rounded-2xl">
          <div
@@ -26,8 +27,17 @@ const ProjectCard:React.FC<Props> = ({ skills }) => {
                         />
                      ))}
                   </div>
-                  {/* <p className="text-sm bg-indigo-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">tutorial</p> */}
-                  <p className="text-sm bg-teal-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">Self</p>
+                  {  tutorial 
+                     ? (
+                        <p className="text-sm bg-indigo-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">
+                           tutorial
+                        </p>
+                     )
+                     :  (
+                        <p className="text-sm bg-teal-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">
+                           Self
+                        </p>
+                     )}
                </div>
                <h1 className="font-serif text-xl tracking-wider">
                   ProjectCard

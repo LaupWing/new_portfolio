@@ -46,43 +46,50 @@ export default function Home() {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css", "firebase", "react"]
+         skills: ["css", "firebase", "react"],
+         tutorial: false
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"]
+         skills: ["css"],
+         tutorial: true
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"]
+         skills: ["css"],
+         tutorial: false
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"]
+         skills: ["css"],
+         tutorial: false
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"]
+         skills: ["css"],
+         tutorial: true
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"]
+         skills: ["css"],
+         tutorial: false
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"]
+         skills: ["css"],
+         tutorial: false
       },
    ] as Project[]
    return (
@@ -119,6 +126,7 @@ export default function Home() {
             {data.map((d, i)=>(
                <ProjectCard
                   skills={d.skills}
+                  tutorial={d.tutorial}
                   key={i}
                />
             ))}
