@@ -52,7 +52,7 @@ export default function Home() {
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
-         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
+         image: "https://editors.dexerto.com/wp-content/uploads/2022/12/01/UI-Ran-Out-of-Room-Error-Apex-Legends.jpg",
          skills: ["css"],
          tutorial: true
       },
@@ -127,6 +127,7 @@ export default function Home() {
                <ProjectCard
                   skills={d.skills}
                   tutorial={d.tutorial}
+                  image={d.image}
                   key={i}
                />
             ))}

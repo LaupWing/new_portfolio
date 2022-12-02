@@ -6,9 +6,10 @@ import Skill from "./Skill"
 interface Props {
    skills: Skills[]
    tutorial: boolean
+   image: string
 }
 
-const ProjectCard:React.FC<Props> = ({ skills, tutorial }) => {
+const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
    return (
       <div className="bg-background-secundair p-4 border-accent border text-accent rounded-2xl">
          <div
@@ -47,8 +48,9 @@ const ProjectCard:React.FC<Props> = ({ skills, tutorial }) => {
                   sit doloribus ab ipsa maiores ad dolorum.
                </p>
                <img
-                  src="https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png"
+                  src={image}
                   className="aspect-video w-full object-cover rounded mt-4"
+                  alt="Project image"
                />
             </div>
          </div>
