@@ -4,6 +4,7 @@ import ProjectCard from "../components/ProjectCard"
 import Filters from "../components/Filters"
 import { Project, Skill } from "typings"
 import { useState } from "react"
+import { motion } from "framer-motion"
 
 
 export default function Home() {
