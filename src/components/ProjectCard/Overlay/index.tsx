@@ -18,8 +18,11 @@ const Overlay = () => {
       >
          <AiFillEye className="text-orange-400"/>
          <motion.div
-               whileInView={{
-                  scale: 2,
+               initial={{
+                  scale: 1,
+               }}
+               animate={{
+                  scale: 2
                }}
                transition={{
                   duration: 2,
