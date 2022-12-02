@@ -1,14 +1,13 @@
 import React from "react"
 import { IoLogoFirebase, IoLogoReact, IoLogoVue } from "react-icons/io5"
-import { SkillIcons } from "typings"
+import { Skills } from "typings"
 import Skill from "./Skill"
 
 interface Props {
-   skills: SkillIcons[]
+   skills: Skills[]
 }
 
 const ProjectCard:React.FC<Props> = ({ skills }) => {
-   console.log(skills)
    return (
       <div className="bg-background-secundair p-4 border-accent border text-accent rounded-2xl">
          <div

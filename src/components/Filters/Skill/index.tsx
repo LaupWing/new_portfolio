@@ -2,13 +2,13 @@ import React, { FC } from "react"
 import icons from "src/utils/icons"
 
 interface Props {
-   icon: string,
+   name: string,
    active: boolean,
    onClick: () => void
 }
 
-const Skill:FC<Props> = ({ icon, active, onClick }) => {
-   const Icon = (icons as any)[icon]
+const Skill:FC<Props> = ({ name, active, onClick }) => {
+   const Icon = (icons as any)[name]
 
    return (
       <div 

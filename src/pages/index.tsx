@@ -20,37 +20,30 @@ export default function Home() {
    const [filters, setFilters] = useState<Skill[]>([
       {
          active: true,
-         icon: Icons.firebase,
          name: "firebase"
       },
       {
          active: true,
-         icon: Icons.nextjs,
          name: "nextjs"
       },
       {
          active: true,
-         icon: Icons.react,
          name: "react"
       },
       {
          active: true,
-         icon: Icons.solidity,
          name: "solidity"
       },
       {
          active: true,
-         icon: Icons.css,
          name: "css"
       },
       {
          active: true,
-         icon: Icons.typescript,
          name: "typescript"
       },
       {
          active: true,
-         icon: Icons.vue,
          name: "vue"
       },
    ])

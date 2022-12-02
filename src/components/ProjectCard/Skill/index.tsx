@@ -1,9 +1,9 @@
 import React from "react"
 import icons from "src/utils/icons"
-import { SkillIcons } from "typings"
+import { Skills } from "typings"
 
 interface Props {
-   icon: SkillIcons
+   icon: Skills
 }
 
 const Skill:React.FC<Props> = ({ icon }) => {

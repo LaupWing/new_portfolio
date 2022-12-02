@@ -28,7 +28,7 @@ const Filters:FC<Props> = ({
          {skills.map(skill=>(
             <SkillCmp
                key={skill.name}
-               icon={skill.icon}
+               name={skill.name}
                active={skill.active}
                onClick={()=>{
                   toggle(skill.name)
