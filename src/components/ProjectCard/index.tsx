@@ -1,5 +1,4 @@
 import React from "react"
-import { IoLogoFirebase, IoLogoReact, IoLogoVue } from "react-icons/io5"
 import { Skills } from "typings"
 import Skill from "./Skill"
 
