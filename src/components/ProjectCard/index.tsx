@@ -1,5 +1,6 @@
 import React from "react"
 import { Skills } from "typings"
+import Overlay from "./Overlay"
 import Skill from "./Skill"
 
 interface Props {
@@ -17,6 +18,7 @@ const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
                paddingBottom: "115%",
             }}
          >
+            <Overlay/>
             <div className="absolute inset-0 duration-500 hover:blur-md flex flex-col justify-between">
                <div className="flex items-start justify-between">
                   <div className="flex">
