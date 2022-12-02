@@ -2,7 +2,7 @@ import Head from "next/head"
 import { IoIosClose } from "react-icons/io"
 import ProjectCard from "../components/ProjectCard"
 import Filters from "../components/Filters"
-import { Skill } from "typings"
+import { Project, Skill } from "typings"
 import { useState } from "react"
 
 export enum Icons {
@@ -59,14 +59,49 @@ export default function Home() {
 
 
    const data = [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7
-   ]
+      {
+         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
+         name: "projectcard",
+         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
+         skills: ["css"]
+      },
+      {
+         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
+         name: "projectcard",
+         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
+         skills: ["css"]
+      },
+      {
+         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
+         name: "projectcard",
+         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
+         skills: ["css"]
+      },
+      {
+         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
+         name: "projectcard",
+         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
+         skills: ["css"]
+      },
+      {
+         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
+         name: "projectcard",
+         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
+         skills: ["css"]
+      },
+      {
+         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
+         name: "projectcard",
+         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
+         skills: ["css"]
+      },
+      {
+         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
+         name: "projectcard",
+         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
+         skills: ["css"]
+      },
+   ] as Project[]
    return (
       <div className="flex flex-col flex-1 items-start">
          <Head>
