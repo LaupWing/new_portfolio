@@ -63,7 +63,7 @@ export default function Home() {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"]
+         skills: ["css", "firebase"]
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
@@ -135,6 +135,7 @@ export default function Home() {
          <main className="grid grid-cols-4 w-full mb-10 gap-6 px-5 mx-auto max-w-7xl">
             {data.map((d, i)=>(
                <ProjectCard
+                  skills={d.skills}
                   key={i}
                />
             ))}
