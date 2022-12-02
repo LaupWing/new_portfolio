@@ -8,7 +8,7 @@ export enum Icons {
    "typescript" = "SiTypescript"
 }
 
-export type _icons = {
+export type SkillIcons = {
    "firebase" :  "IoLogoFirebase",  
    "react" : "IoLogoReact" , 
    "vue" : "IoLogoVue", 
@@ -27,6 +27,9 @@ export interface Skill {
 
 export interface Project {
    skills: Skills
-   name: skills
-   active: boolean
+   name: string
+   description: string
+   tutorial: boolean
+   image: string
+
 }
