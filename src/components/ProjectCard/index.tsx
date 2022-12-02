@@ -8,7 +8,6 @@ interface Props {
 }
 
 const ProjectCard:React.FC<Props> = ({ skills }) => {
-   console.log(skills)
    return (
       <div className="bg-background-secundair p-4 border-accent border text-accent rounded-2xl">
          <div

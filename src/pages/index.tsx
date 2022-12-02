@@ -5,16 +5,6 @@ import Filters from "../components/Filters"
 import { Project, Skill } from "typings"
 import { useState } from "react"
 
-export enum Icons {
-   "firebase" =  "IoLogoFirebase",  
-   "react" = "IoLogoReact" , 
-   "vue" = "IoLogoVue", 
-   "solidity" = "SiSolidity", 
-   "nextjs" = "SiNextdotjs",
-   "typescript" = "SiTypescript",
-   "css" = "IoLogoCss3"
-}
-
 
 export default function Home() {
    const [filters, setFilters] = useState<Skill[]>([
