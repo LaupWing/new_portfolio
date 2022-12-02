@@ -1,12 +1,14 @@
 import React from "react"
 import { IoLogoFirebase, IoLogoReact, IoLogoVue } from "react-icons/io5"
 import { Skills } from "typings"
+import Skill from "./Skill"
 
 interface Props {
    skills: Skills[]
 }
 
 const ProjectCard:React.FC<Props> = ({ skills }) => {
+   console.log(skills)
    return (
       <div className="bg-background-secundair p-4 border-accent border text-accent rounded-2xl">
          <div
@@ -18,15 +20,11 @@ const ProjectCard:React.FC<Props> = ({ skills }) => {
             <div className="absolute inset-0 duration-500 hover:blur-md flex flex-col justify-between">
                <div className="flex items-start justify-between">
                   <div className="flex">
-                     <div className="w-8 h-8 flex justify-center items-center border-2 border-accent bg-white rounded-full">
-                        <IoLogoVue className="text-background-secundair" size={20}/>
-                     </div>
-                     <div className="w-8 h-8 flex justify-center items-center border-2 border-accent bg-white rounded-full transform -translate-x-2">
-                        <IoLogoReact className="text-background-secundair" size={20}/>
-                     </div>
-                     <div className="w-8 h-8 flex justify-center items-center border-2 border-accent bg-white rounded-full transform -translate-x-4">
-                        <IoLogoFirebase className="text-background-secundair" size={20}/>
-                     </div>
+                     {/* {skills.map(s => (
+                        <Skill
+                           icon={s}
+                        />
+                     ))} */}
                   </div>
                   {/* <p className="text-sm bg-indigo-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">tutorial</p> */}
                   <p className="text-sm bg-teal-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">Self</p>
