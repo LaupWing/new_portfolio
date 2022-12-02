@@ -17,10 +17,16 @@ export type _icons = {
    "css" : "IoLogoCss3",
    "typescript" : "SiTypescript"
 }
-export type skills = keyof typeof Icons
+export type Skills = keyof typeof Icons
 
 export interface Skill {
    icon: Icons
+   name: skills
+   active: boolean
+}
+
+export interface Project {
+   skills: Skills
    name: skills
    active: boolean
 }
