@@ -96,6 +96,12 @@ export default function Home() {
 
    const projects_filtered = data
       .filter(project => {
+         const active_skills = filters
+            .filter(f => f.active)
+            .map(f => f.name)
+         return project.skills.find(skill => active_skills.includes(skill))
+      })
+      .filter(project => {
          if(showSelf && showTutorial){
             return project
          }else if (showSelf && !showTutorial){
