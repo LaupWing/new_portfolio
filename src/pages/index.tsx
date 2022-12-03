@@ -93,6 +93,18 @@ export default function Home() {
          tutorial: false
       },
    ] as Project[]
+
+   const projects_filtered = data
+      .filter(project => {
+         if(showSelf && showTutorial){
+            return project
+         }else if (showSelf && !showTutorial){
+            return project.tutorial === false
+         }else if (!showSelf && showTutorial){
+            return project.tutorial === true
+         }
+      })
+
    return (
       <div className="flex flex-col flex-1 items-start">
          <Head>
@@ -124,7 +136,7 @@ export default function Home() {
             }}
          />
          <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 w-full mb-10 gap-6 px-5 mx-auto max-w-7xl">
-            {data.map((d, i)=>(
+            {projects_filtered.map((d, i)=>(
                <ProjectCard
                   skills={d.skills}
                   tutorial={d.tutorial}
