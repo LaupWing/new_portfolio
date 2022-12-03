@@ -22,7 +22,7 @@ const Filters:FC<Props> = ({
 }) => {
    
    return (
-      <nav className="px-5 py-7 max-w-7xl text-accent flex items-center space-x-4">
+      <nav className="px-5 py-7 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start">
          <BiSearch size={35}/>
          <BiBomb size={35}/>
          {skills.map(skill=>(
