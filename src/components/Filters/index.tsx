@@ -22,9 +22,15 @@ const Filters:FC<Props> = ({
 }) => {
    
    return (
-      <nav className="px-5 py-7 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start">
-         <BiSearch size={35}/>
-         <BiBomb size={35}/>
+      <nav className="px-5 py-7 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start shrink-0 overflow-x-auto">
+         <BiSearch 
+            size={35}
+            className="shrink-0"
+            />
+         <BiBomb 
+            size={35}
+            className="shrink-0"
+         />
          {skills.map(skill=>(
             <SkillCmp
                key={skill.name}
@@ -36,13 +42,13 @@ const Filters:FC<Props> = ({
             />
          ))}
          <button 
-            className={"text-sm rounded-full duration-200 w-20 text-center border-2 border-teal-400 py-0.5 uppercase font-bold font-serif tracking-widest " + (showSelf ? "bg-teal-500 text-white" : "text-teal-500 opacity-30")}
+            className={"text-sm rounded-full shrink-0 duration-200 w-20 text-center border-2 border-teal-400 py-0.5 uppercase font-bold font-serif tracking-widest " + (showSelf ? "bg-teal-500 text-white" : "text-teal-500 opacity-30")}
             onClick={()=> setShowSelf(prev => !prev)}
          >
             Self
          </button>
          <button 
-            className={"text-sm duration-200 rounded-full w-20 text-center py-0.5 uppercase border-2 border-indigo-500 font-bold font-serif tracking-widest " + (showTutorial ? "bg-indigo-500 text-white" : "text-indigo-500 opacity-30")}
+            className={"text-sm duration-200 shrink-0 rounded-full w-20 text-center py-0.5 uppercase border-2 border-indigo-500 font-bold font-serif tracking-widest " + (showTutorial ? "bg-indigo-500 text-white" : "text-indigo-500 opacity-30")}
             onClick={()=> setShowTutorial(prev => !prev)}
          >
             tutorial
