@@ -25,6 +25,7 @@ const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
                      {skills.map((s, i) => (
                         <Skill
                            index={i}
+                           key={i}
                            name={s}
                         />
                      ))}
