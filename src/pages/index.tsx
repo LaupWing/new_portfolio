@@ -93,14 +93,14 @@ export default function Home() {
          tutorial: false
       },
    ] as Project[]
+   
+
+   const active_skills = filters
+      .filter(f => f.active)
+      .map(f => f.name)
 
    const projects_filtered = data
-      .filter(project => {
-         const active_skills = filters
-            .filter(f => f.active)
-            .map(f => f.name)
-         return project.skills.find(skill => active_skills.includes(skill))
-      })
+      .filter(project => project.skills.find(skill => active_skills.includes(skill)))
       .filter(project => {
          if(showSelf && showTutorial){
             return project
@@ -148,6 +148,7 @@ export default function Home() {
                   tutorial={d.tutorial}
                   image={d.image}
                   key={i}
+                  active_skills={active_skills}
                />
             ))}
          </main>

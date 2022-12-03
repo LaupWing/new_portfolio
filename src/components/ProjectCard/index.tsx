@@ -7,6 +7,7 @@ interface Props {
    skills: Skills[]
    tutorial: boolean
    image: string
+   active_skills: string[]
 }
 
 const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
