@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Skills } from "typings"
 import Overlay from "./Overlay"
 import Skill from "./Skill"
@@ -11,16 +11,22 @@ interface Props {
 }
 
 const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
+   const [hover, setHover] = useState(false) 
+
    return (
-      <div className="bg-background-secundair relative group max-w-sm p-4 border-accent border text-accent rounded-2xl">
-         <Overlay/>
+      <div 
+         className="bg-background-secundair relative max-w-sm p-4 border-accent border text-accent rounded-2xl"
+         onMouseOver={()=> setHover(true)}
+         onMouseOut={()=> setHover(false)}
+      >
+         {hover && <Overlay/>}
          <div
             className="relative"
             style={{
                paddingBottom: "115%",
             }}
          >
-            <div className="absolute inset-0 duration-500 flex flex-col justify-between">
+            <div className={"absolute inset-0 duration-500 flex flex-col justify-between " + (hover ? "blur" : "" )}>
                <div className="flex items-start justify-between">
                   <div className="flex">
                      {skills.map((s, i) => (
