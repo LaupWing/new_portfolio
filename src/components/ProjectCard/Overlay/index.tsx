@@ -4,34 +4,10 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai"
 
 const Overlay = () => {
    return (
-      <motion.div
-         whileHover={{
-            opacity: [0, 1]
-         }}
-         transition={{
-            duration: 0.25,
-            ease: "easeInOut",
-            staggerChildren: 0.5,
-            delayChildren: 0.5
-         }}
-         className="inset-0 absolute opacity-0 z-50 bg-white"
-      >
-         <AiFillEye className="text-orange-400"/>
-         <motion.div
-               initial={{
-                  scale: 1,
-               }}
-               animate={{
-                  scale: 2
-               }}
-               transition={{
-                  duration: 2,
-               }}
-               className="app__flex"
-            >
-               <AiFillEye />
-            </motion.div>
-      </motion.div>
+      <div className="absolute inset-0 z-50 hidden group-hover:flex justify-center items-center flex-col space-y-10">
+         <AiFillEye className="text-orange-400 cursor-pointer"/>
+         <AiFillGithub className="text-orange-400"/>
+      </div>
    )
 }
 
