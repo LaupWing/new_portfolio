@@ -14,6 +14,7 @@ const Skill:FC<Props> = ({ name, active, onClick }) => {
       <div 
          className={"h-10 w-10 rounded-full shrink-0 cursor-pointer duration-200 flex items-center justify-center text-white border border-accent " + (active ? "gradient-animation" : "opacity-30")}
          onClick={onClick}
+         data-tooltip-content="hello world"
       >
          <Icon size={22}/>
       </div>
