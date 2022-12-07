@@ -12,7 +12,7 @@ interface Props {
 
 const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
    return (
-      <div className="bg-background-secundair p-4 border-accent border text-accent rounded-2xl">
+      <div className="bg-background-secundair max-w-sm p-4 border-accent border text-accent rounded-2xl">
          <div
             className="relative"
             style={{
