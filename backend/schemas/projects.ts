@@ -23,8 +23,34 @@ export default defineType({
          ],
          options: {
             list: [
-               {title: "Sci-Fi", value: "sci-fi"},
-               {title: "Western", value: "western"},
+               {
+                  title: "Firebase", 
+                  value: "firebase"
+               },
+               {
+                  title: "React", 
+                  value: "react"
+               },
+               {
+                  title: "Vue", 
+                  value: "vue"
+               },
+               {
+                  title: "Solidity", 
+                  value: "solidity"
+               },
+               {
+                  title: "Nextjs", 
+                  value: "nextjs"
+               },
+               {
+                  title: "Typescript", 
+                  value: "typescript"
+               },
+               {
+                  title: "Css", 
+                  value: "css"
+               },
             ],
          },
       }),
