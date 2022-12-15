@@ -9,7 +9,13 @@ export default defineType({
          name: "name",
          title: "Name",
          type: "string",
-         description: "Name of the project you are currently working on",
+         description: "Name of the project",
+      }),
+      defineField({
+         name: "description",
+         title: "Description",
+         type: "string",
+         description: "Description of the project",
       }),
       defineField({
          name: "skills",
