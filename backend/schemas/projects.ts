@@ -18,6 +18,12 @@ export default defineType({
          description: "Description of the project",
       }),
       defineField({
+         name: "image",
+         title: "Image",
+         type: "image",
+         description: "Example project image"
+      }),
+      defineField({
          name: "skills",
          title: "Skills",
          type: "array",
