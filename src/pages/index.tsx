@@ -7,7 +7,7 @@ import { useState } from "react"
 import { motion, Variants } from "framer-motion"
 import "react-toastify/dist/ReactToastify.css"
 
-const variantsBoxContainer: Variants = {
+const mainContainerVariants: Variants = {
    hidden: {
       opacity: 0,
       transition: {
@@ -157,7 +157,12 @@ export default function Home() {
                   }))
             }}
          />
-         <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 w-full mb-10 gap-6 px-5 mx-auto max-w-7xl">
+         <motion.main 
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 w-full mb-10 gap-6 px-5 mx-auto max-w-7xl"
+            variants={mainContainerVariants}
+            initial="hidden"
+            animate="show"
+         >
             {projects_filtered.map((d, i)=>(
                <ProjectCard
                   skills={d.skills}
@@ -167,7 +172,7 @@ export default function Home() {
                   active_skills={active_skills}
                />
             ))}
-         </main>
+         </motion.main>
       </div>
    )
 }
