@@ -4,9 +4,25 @@ import ProjectCard from "../components/ProjectCard"
 import Filters from "../components/Filters"
 import { Project, Skill } from "typings"
 import { useState } from "react"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import "react-toastify/dist/ReactToastify.css"
 
+const variantsBoxContainer: Variants = {
+   hidden: {
+      opacity: 0,
+      transition: {
+         staggerChildren: 0.1,
+         delayChildren: 0.3
+      }
+   },
+   show: {
+      opacity: 1,
+      transition: {
+         staggerChildren: 0.1,
+         delayChildren: 0.3
+      }
+   }
+ }
 export default function Home() {
    const [filters, setFilters] = useState<Skill[]>([
       {
