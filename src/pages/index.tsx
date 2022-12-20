@@ -12,16 +12,14 @@ const mainContainerVariants: Variants = {
       opacity: 0,
       transition: {
          staggerChildren: 0.1,
-         when: "beforeChildren",
-         delayChildren: 0.3
+         when: "beforeChildren"
       }
    },
    show: {
       opacity: 1,
       transition: {
-         staggerChildren: 2,
-         when: "beforeChildren",
-         delayChildren: 3
+         staggerChildren: 0.1,
+         when: "beforeChildren"
       }
    }
  }

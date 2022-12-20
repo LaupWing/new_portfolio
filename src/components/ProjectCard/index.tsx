@@ -12,8 +12,8 @@ interface Props {
 }
 
 const projectVariant: Variants = {
-   hidden: {  top: -100 },
-   show: {  top: 0 }
+   hidden: {  top: 50, opacity: 0 },
+   show: {  top: 0, opacity: 1 }
  }
 
 const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
@@ -25,8 +25,6 @@ const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
          onMouseOver={()=> setHover(true)}
          onMouseOut={()=> setHover(false)}
          variants={projectVariant}
-         initial="hidden"
-         animate="show"
       >
          {hover && <Overlay/>}
          <div
