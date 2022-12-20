@@ -12,8 +12,8 @@ interface Props {
 }
 
 const projectVariant: Variants = {
-   hidden: { opacity: 0, top: -100 },
-   show: { opacity: 1, top: 0 }
+   hidden: {  top: -100 },
+   show: {  top: 0 }
  }
 
 const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
