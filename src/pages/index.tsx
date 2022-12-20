@@ -5,7 +5,7 @@ import Filters from "../components/Filters"
 import { Project, Skill } from "typings"
 import { useState } from "react"
 import { motion } from "framer-motion"
-
+import { Tooltip } from "react-tooltip"
 
 export default function Home() {
    const [filters, setFilters] = useState<Skill[]>([
@@ -141,6 +141,8 @@ export default function Home() {
                   }))
             }}
          />
+         <Tooltip anchorId="test" content="test fwertwehorjweort"/>
+         <button id="test" className="text-white">Test</button>
          <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 w-full mb-10 gap-6 px-5 mx-auto max-w-7xl">
             {projects_filtered.map((d, i)=>(
                <ProjectCard
