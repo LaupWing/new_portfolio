@@ -39,7 +39,7 @@ const Filters:FC<Props> = ({
                active={skill.active}
                onClick={()=>{
                   toggle(skill.name)
-                  toast.info(`Toggle ${skill.name}`)
+                  toast(<p>Toggle <b>{skill.name}</b></p>)
                }}
             />
          ))}
