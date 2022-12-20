@@ -64,49 +64,56 @@ export default function Home() {
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
          skills: ["css", "firebase", "react"],
-         tutorial: false
+         tutorial: false,
+         id: "2"
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://editors.dexerto.com/wp-content/uploads/2022/12/01/UI-Ran-Out-of-Room-Error-Apex-Legends.jpg",
          skills: ["css"],
-         tutorial: true
+         tutorial: true,
+         id: "3"
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
          skills: ["css"],
-         tutorial: false
+         tutorial: false,
+         id: "23"
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
          skills: ["css"],
-         tutorial: false
+         tutorial: false,
+         id: "211"
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
          skills: ["css"],
-         tutorial: true
+         tutorial: true,
+         id: "2222w2"
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
          skills: ["css"],
-         tutorial: false
+         tutorial: false,
+         id: "2ewqeqw"
       },
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
          name: "projectcard",
          image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
          skills: ["css"],
-         tutorial: false
+         tutorial: false,
+         id: "25534543"
       },
    ] as Project[]
    
@@ -165,13 +172,12 @@ export default function Home() {
             exit="hidden"
          >  
             <AnimatePresence>
-
                {projects_filtered.map((d, i)=>(
                   <ProjectCard
                      skills={d.skills}
                      tutorial={d.tutorial}
                      image={d.image}
-                     key={i}
+                     key={d.id}
                      active_skills={active_skills}
                   />
                ))}
