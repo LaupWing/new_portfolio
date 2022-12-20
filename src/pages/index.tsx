@@ -159,9 +159,10 @@ export default function Home() {
          />
          <motion.main 
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 w-full mb-10 gap-6 px-5 mx-auto max-w-7xl"
-            variants={mainContainerVariants}
-            initial="hidden"
-            animate="show"
+            transition={{
+               duration: 0.5,
+               delayChildren: 0.5,
+            }}
          >  
             <AnimatePresence>
 
