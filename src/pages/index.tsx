@@ -4,7 +4,7 @@ import ProjectCard from "../components/ProjectCard"
 import Filters from "../components/Filters"
 import { Project, Skill } from "typings"
 import { useState } from "react"
-import { motion, Variants } from "framer-motion"
+import { motion, Variants, AnimatePresence } from "framer-motion"
 import "react-toastify/dist/ReactToastify.css"
 
 const mainContainerVariants: Variants = {
@@ -163,15 +163,17 @@ export default function Home() {
             initial="hidden"
             animate="show"
          >
-            {projects_filtered.map((d, i)=>(
-               <ProjectCard
-                  skills={d.skills}
-                  tutorial={d.tutorial}
-                  image={d.image}
-                  key={i}
-                  active_skills={active_skills}
-               />
-            ))}
+            <AnimatePresence>
+               {projects_filtered.map((d, i)=>(
+                  <ProjectCard
+                     skills={d.skills}
+                     tutorial={d.tutorial}
+                     image={d.image}
+                     key={i}
+                     active_skills={active_skills}
+                  />
+               ))}
+            </AnimatePresence>
          </motion.main>
       </div>
    )
