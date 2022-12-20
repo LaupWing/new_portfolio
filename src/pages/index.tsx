@@ -162,7 +162,9 @@ export default function Home() {
             variants={mainContainerVariants}
             initial="hidden"
             animate="show"
-         >
+         >  
+            <AnimatePresence>
+
                {projects_filtered.map((d, i)=>(
                   <ProjectCard
                      skills={d.skills}
@@ -172,6 +174,7 @@ export default function Home() {
                      active_skills={active_skills}
                   />
                ))}
+            </AnimatePresence>
          </motion.main>
       </div>
    )
