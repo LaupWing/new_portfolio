@@ -1,3 +1,4 @@
+import { Variants, motion } from "framer-motion"
 import React, { useState } from "react"
 import { Skills } from "typings"
 import Overlay from "./Overlay"
@@ -10,14 +11,22 @@ interface Props {
    active_skills: string[]
 }
 
+const projectVariant: Variants = {
+   hidden: { opacity: 0, top: -100 },
+   show: { opacity: 1, top: 0 }
+ }
+
 const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
    const [hover, setHover] = useState(false) 
 
    return (
-      <div 
+      <motion.div 
          className="bg-background-secundair overflow-hidden relative max-w-sm p-4 border-accent border text-accent rounded-2xl"
          onMouseOver={()=> setHover(true)}
          onMouseOut={()=> setHover(false)}
+         variants={projectVariant}
+         initial="hidden"
+         animate="show"
       >
          {hover && <Overlay/>}
          <div
@@ -63,7 +72,7 @@ const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
                />
             </div>
          </div>
-      </div>
+      </motion.div>
    )
 }
 
