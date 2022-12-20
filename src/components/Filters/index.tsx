@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import { BiBomb, BiSearch } from "react-icons/bi"
+import { toast } from "react-toastify"
 import { Skill } from "typings"
 import SkillCmp from "./Skill"
 
@@ -20,7 +21,7 @@ const Filters:FC<Props> = ({
    showTutorial,
    setShowTutorial 
 }) => {
-   
+
    return (
       <nav className="px-5 py-7 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start shrink-0 overflow-x-auto">
          <BiSearch 
@@ -38,6 +39,7 @@ const Filters:FC<Props> = ({
                active={skill.active}
                onClick={()=>{
                   toggle(skill.name)
+                  toast.info(`Toggle ${skill.name}`)
                }}
             />
          ))}

@@ -5,6 +5,7 @@ import Filters from "../components/Filters"
 import { Project, Skill } from "typings"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import "react-toastify/dist/ReactToastify.css"
 
 export default function Home() {
    const [filters, setFilters] = useState<Skill[]>([
