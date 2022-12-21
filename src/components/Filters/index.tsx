@@ -1,6 +1,7 @@
 import React, { FC } from "react"
 import { BiBomb, BiSearch } from "react-icons/bi"
 import { toast } from "react-toastify"
+import { useAppSelector } from "src/app/hooks"
 import { Skill } from "typings"
 import SkillCmp from "./Skill"
 
@@ -21,6 +22,7 @@ const Filters:FC<Props> = ({
    showTutorial,
    setShowTutorial 
 }) => {
+   const {darkMode} = useAppSelector(state => state.theme)
 
    return (
       <nav className="px-5 py-7 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start shrink-0 overflow-x-auto">
@@ -44,7 +46,10 @@ const Filters:FC<Props> = ({
             />
          ))}
          <button 
-            className={"text-sm rounded-full shrink-0 duration-200 w-20 text-center border-2 border-teal-400 py-0.5 uppercase font-bold font-serif tracking-widest " + (showSelf ? "bg-teal-500 text-white" : "text-teal-500 opacity-30")}
+            className={"text-sm rounded-full shrink-0 duration-200 w-20 text-center border-2 py-0.5 uppercase font-bold font-serif tracking-widest " + 
+               (showSelf ? "bg-teal-500 text-white " : "text-teal-500 opacity-30 ") +
+               (darkMode ? "border-teal-400" : "border-black")
+            }
             onClick={()=> setShowSelf(prev => !prev)}
          >
             Self

@@ -12,7 +12,7 @@ const Layout: FC<Props> = ({ children }) => {
 
    return (
       <div className={
-         `w-screen min-h-screen fixed inset-0 overflow-y-auto flex flex-col ${darkMode ? "bg-background-primary" : ""}`}
+         `w-screen min-h-screen duration-200 fixed inset-0 overflow-y-auto flex flex-col ${darkMode ? "bg-background-primary" : "bg-white"}`}
       >
          <header className="py-3 border-b-2 mx-4 border-background-secundair flex items-center justify-between relative">
             <h1 className="text-white font-serif text-2xl">My Portfolio</h1>
