@@ -53,12 +53,19 @@ const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
                   </div>
                   {  tutorial 
                      ? (
-                        <p className="text-sm bg-indigo-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">
+                        <p className={
+                           "text-sm bg-indigo-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest " + 
+                           (darkMode ? "" : "border-2 border-black")
+                        }>
                            tutorial
                         </p>
                      )
                      :  (
-                        <p className="text-sm bg-teal-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest">
+                        <p 
+                           className={"text-sm bg-teal-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest " +
+                           (darkMode ? "" : "border-2 border-black")
+                        }
+                        >
                            Self
                         </p>
                      )}
