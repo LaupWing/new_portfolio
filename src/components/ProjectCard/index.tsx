@@ -21,7 +21,7 @@ const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
 
    return (
       <motion.div 
-         className="dark dark:bg-background-secundair overflow-hidden relative max-w-sm p-4 border-accent border text-accent rounded-2xl"
+         className="bg-background-secundair overflow-hidden relative max-w-sm p-4 border-accent border text-accent rounded-2xl"
          onMouseOver={()=> setHover(true)}
          onMouseOut={()=> setHover(false)}
          variants={projectVariant}
