@@ -30,6 +30,12 @@ export default defineType({
          description: "Url of github repository"
       }),
       defineField({
+         name: "tutorial",
+         title: "Tutorial",
+         type: "boolean",
+         description: "Is this project made from a tutorial"
+      }),
+      defineField({
          name: "url",
          title: "Url",
          type: "url",
