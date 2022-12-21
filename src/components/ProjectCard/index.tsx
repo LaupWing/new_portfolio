@@ -1,5 +1,6 @@
 import { Variants, motion } from "framer-motion"
 import { useState } from "react"
+import { useAppSelector } from "src/app/hooks"
 import { Skills } from "typings"
 import Overlay from "./Overlay"
 import Skill from "./Skill"
@@ -18,10 +19,11 @@ const projectVariant: Variants = {
 
 const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
    const [hover, setHover] = useState(false) 
-
+   const {darkMode} = useAppSelector(state => state.theme)
+   
    return (
       <motion.div 
-         className="bg-background-secundair overflow-hidden relative max-w-sm p-4 border-accent border text-accent rounded-2xl"
+         className={`overflow-hidden relative max-w-sm p-4 border-accent border text-accent rounded-2xl ${darkMode ? "bg-background-secundair" : "bg-white" }`}
          onMouseOver={()=> setHover(true)}
          onMouseOut={()=> setHover(false)}
          variants={projectVariant}
