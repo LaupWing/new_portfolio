@@ -3,8 +3,9 @@ import { IoIosClose } from "react-icons/io"
 import ProjectCard from "../components/ProjectCard"
 import Filters from "../components/Filters"
 import { Project, Skill } from "typings"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion, Variants, AnimatePresence } from "framer-motion"
+import {useTheme} from "next-themes"
 import "react-toastify/dist/ReactToastify.css"
 
 const mainContainerVariants: Variants = {
@@ -57,7 +58,11 @@ export default function Home() {
    const [showSelf, setShowSelf] = useState(true) 
    const [showTutorial, setShowTutorial] = useState(true) 
 
-
+   const {systemTheme , theme, setTheme} = useTheme()
+   useEffect(()=>{
+      setTheme("dark")
+      console.log(theme)
+   })
    const data = [
       {
          description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
