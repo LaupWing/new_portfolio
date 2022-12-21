@@ -25,9 +25,6 @@ const ProjectCard:React.FC<Props> = ({ skills, tutorial, image }) => {
          onMouseOver={()=> setHover(true)}
          onMouseOut={()=> setHover(false)}
          variants={projectVariant}
-         exit="hidden"
-         initial="hidden"
-         animate="show"
       >
          {hover && <Overlay/>}
          <div
