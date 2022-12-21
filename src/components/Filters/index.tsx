@@ -55,7 +55,10 @@ const Filters:FC<Props> = ({
             Self
          </button>
          <button 
-            className={"text-sm duration-200 shrink-0 rounded-full w-20 text-center py-0.5 uppercase border-2 border-indigo-500 font-bold font-serif tracking-widest " + (showTutorial ? "bg-indigo-500 text-white" : "text-indigo-500 opacity-30")}
+            className={"text-sm duration-200 shrink-0 rounded-full w-20 text-center py-0.5 uppercase border-2 font-bold font-serif tracking-widest " + 
+               (showTutorial ? "bg-indigo-500 text-white " : "text-indigo-500 opacity-30 ") +
+               (darkMode ? "border-indigo-500" : "border-black shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]")
+            }
             onClick={()=> setShowTutorial(prev => !prev)}
          >
             tutorial
