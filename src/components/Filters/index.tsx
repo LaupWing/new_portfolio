@@ -48,7 +48,7 @@ const Filters:FC<Props> = ({
          <button 
             className={"text-sm rounded-full shrink-0 duration-200 w-20 text-center border-2 py-0.5 uppercase font-bold font-serif tracking-widest " + 
                (showSelf ? "bg-teal-500 text-white " : "text-teal-500 opacity-30 ") +
-               (darkMode ? "border-teal-400" : "border-black")
+               (darkMode ? "border-teal-400" : "border-black shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]")
             }
             onClick={()=> setShowSelf(prev => !prev)}
          >
