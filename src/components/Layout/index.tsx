@@ -1,6 +1,7 @@
 import { FC } from "react"
 import { GoBrowser } from "react-icons/go"
 import { RiUser3Line } from "react-icons/ri"
+import Toggle from "./Toggle"
 
 interface Props {
    children?: React.ReactNode
@@ -15,8 +16,7 @@ const Layout: FC<Props> = ({ children }) => {
                <GoBrowser size={30}/>
             </div>
             <div className="flex items-center space-x-2 text-white">
-               <RiUser3Line size={30}/>
-               <p className="font-serif text-xl">Sign in</p>
+               <Toggle/>
             </div>
          </header>
          {children}
