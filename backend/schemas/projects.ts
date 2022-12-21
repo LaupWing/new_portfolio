@@ -24,6 +24,18 @@ export default defineType({
          description: "Example project image"
       }),
       defineField({
+         name: "github",
+         title: "Github",
+         type: "url",
+         description: "Url of github repository"
+      }),
+      defineField({
+         name: "url",
+         title: "Url",
+         type: "url",
+         description: "URL of your website"
+      }),
+      defineField({
          name: "skills",
          title: "Skills",
          type: "array",
