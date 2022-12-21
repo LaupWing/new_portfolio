@@ -15,8 +15,9 @@ const Skill:FC<Props> = ({ name, active, onClick }) => {
    return (
       <div className="relative">
          <button 
-            className={"h-10 w-10 rounded-full shrink-0 cursor-pointer duration-200 flex items-center justify-center text-white " + 
+            className={"h-10 w-10 rounded-full shrink-0 cursor-pointer duration-200 flex items-center justify-center " + 
                (active ? "gradient-animation " : "opacity-30 ") + 
+               (!active && !darkMode ? "text-black " : "text-white ") +
                (darkMode ? 
                   "border border-accent" : 
                   "border-2 border-black shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]")
