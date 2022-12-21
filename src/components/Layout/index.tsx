@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import { FC } from "react"
 import { GoBrowser } from "react-icons/go"
 import { RiUser3Line } from "react-icons/ri"
 
