@@ -25,7 +25,11 @@ const Filters:FC<Props> = ({
    const {darkMode} = useAppSelector(state => state.theme)
 
    return (
-      <nav className="px-5 py-7 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start shrink-0 overflow-x-auto sticky top-0 z-50 bg-white">
+      <nav className={"px-5 py-7 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start shrink-0 overflow-x-auto duration-200 sticky top-0 z-50 " + (
+         darkMode ? 
+            "bg-background-primary" :
+            "bg-white"
+      )}>
          <BiSearch 
             size={35}
             className={"shrink-0 " + (darkMode ? "" : "text-black")}
