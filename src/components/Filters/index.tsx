@@ -8,6 +8,7 @@ import SearchBar from "./SearchBar"
 import { motion } from "framer-motion"
 import { IoCloseSharp } from "react-icons/io5"
 import SearchIcon from "./SearchIcon"
+import CloseIcon from "./CloseIcon"
 
 interface Props {
    skills:Skill[]
@@ -43,24 +44,10 @@ const Filters:FC<Props> = ({
                      show_search={show_search}
                   />
                ) : (
-                  <motion.div
-                     initial={{
-                        x: -60
-                     }}
-                     animate={{
-                        x: 0
-                     }}
-                     exit={{
-                        x: -60,
-                     }}
-                     key={"close-btn"}
-                  >
-                     <IoCloseSharp
-                        onClick={() => setShowSearch(!show_search)}
-                        size={35}
-                        className={"cursor-pointer hover:text-red-400 duration-200 shrink-0 " + (darkMode ? "" : "text-black")}
-                     />
-                  </motion.div>
+                  <CloseIcon
+                     setShowSearch={setShowSearch}
+                     show_search={show_search}
+                  />
                )
             }
          </AnimatePresence>
