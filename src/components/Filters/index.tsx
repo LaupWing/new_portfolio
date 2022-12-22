@@ -6,6 +6,7 @@ import { Skill } from "typings"
 import Skills from "./Skills"
 import SearchBar from "./SearchBar"
 import { motion } from "framer-motion"
+import { IoCloseSharp } from "react-icons/io5"
 
 interface Props {
    skills:Skill[]
@@ -28,13 +29,13 @@ const Filters:FC<Props> = ({
    const [show_search, setShowSearch] = useState(false)
 
    return (
-      <nav className={"px-5 h-20 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start shrink-0 overflow-x-auto duration-200 sticky overflow-hidden top-0 z-50 " + (
+      <nav className={"px-5 my-2 h-20 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start shrink-0 overflow-x-auto duration-200 sticky overflow-hidden top-0 z-50 " + (
          darkMode ? 
             "bg-background-primary" :
             "bg-white"
       )}>
          <AnimatePresence mode="wait">
-            {show_search ?
+            {!show_search ?
                (
                   <motion.div
                      initial={{
@@ -67,17 +68,17 @@ const Filters:FC<Props> = ({
                      }}
                      key={"close-btn"}
                   >
-                     <BiSearch
+                     <IoCloseSharp
                         onClick={() => setShowSearch(!show_search)}
                         size={35}
-                        className={"cursor-pointer hover:text-yellow-400 duration-200 shrink-0 " + (darkMode ? "" : "text-black")}
+                        className={"cursor-pointer hover:text-red-400 duration-200 shrink-0 " + (darkMode ? "" : "text-black")}
                      />
                   </motion.div>
                )
             }
          </AnimatePresence>
          <AnimatePresence mode="wait">
-            {show_search ? 
+            {!show_search ? 
                (
                   <Skills
                      setShowSelf={setShowSelf}
