@@ -29,22 +29,24 @@ const Filters:FC<Props> = ({
          <BiSearch 
             size={35}
             className={"shrink-0 " + (darkMode ? "" : "text-black")}
-            />
-         <BiBomb 
-            size={35}
-            className={"shrink-0 " + (darkMode ? "" : "text-black")}
          />
-         {skills.map(skill=>(
-            <SkillCmp
-               key={skill.name}
-               name={skill.name}
-               active={skill.active}
-               onClick={()=>{
-                  toggle(skill.name)
-                  toast(<p>{!skill.active ? "Show": "Hide"} <b>{skill.name}</b></p>)
-               }}
+         <div className="flex items-center space-x-4">
+            <BiBomb 
+               size={35}
+               className={"shrink-0 " + (darkMode ? "" : "text-black")}
             />
-         ))}
+            {skills.map(skill=>(
+               <SkillCmp
+                  key={skill.name}
+                  name={skill.name}
+                  active={skill.active}
+                  onClick={()=>{
+                     toggle(skill.name)
+                     toast(<p>{!skill.active ? "Show": "Hide"} <b>{skill.name}</b></p>)
+                  }}
+               />
+            ))}
+         </div>
          <button 
             className={"text-sm rounded-full shrink-0 duration-200 w-20 text-center border-2 py-0.5 uppercase font-bold font-serif tracking-widest " + 
                (showSelf ? "bg-teal-500 text-white " : "text-teal-500 opacity-30 ") +
