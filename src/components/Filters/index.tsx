@@ -28,11 +28,11 @@ const Filters:FC<Props> = ({
       <nav className="px-5 py-7 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start shrink-0 overflow-x-auto sticky top-0 z-50 bg-white">
          <BiSearch 
             size={35}
-            className="shrink-0"
+            className={"shrink-0 " + (darkMode ? "" : "text-black")}
             />
          <BiBomb 
             size={35}
-            className="shrink-0"
+            className={"shrink-0 " + (darkMode ? "" : "text-black")}
          />
          {skills.map(skill=>(
             <SkillCmp
