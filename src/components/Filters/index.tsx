@@ -37,7 +37,7 @@ const Filters:FC<Props> = ({
             size={35}
             className={"cursor-pointer hover:text-yellow-400 duration-200 shrink-0 " + (darkMode ? "" : "text-black")}
          />
-         <AnimatePresence exitBeforeEnter>
+         <AnimatePresence mode="wait">
             {show_search ? 
                (
                   <motion.div 
