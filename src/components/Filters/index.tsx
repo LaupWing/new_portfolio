@@ -1,10 +1,8 @@
 import { FC, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { BiBomb, BiSearch } from "react-icons/bi"
-import { toast } from "react-toastify"
+import { BiSearch } from "react-icons/bi"
 import { useAppSelector } from "src/app/hooks"
 import { Skill } from "typings"
-import SkillCmp from "./Skill"
 import Skills from "./Skills"
 
 interface Props {
