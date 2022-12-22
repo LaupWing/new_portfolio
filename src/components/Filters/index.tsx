@@ -7,6 +7,7 @@ import Skills from "./Skills"
 import SearchBar from "./SearchBar"
 import { motion } from "framer-motion"
 import { IoCloseSharp } from "react-icons/io5"
+import SearchIcon from "./SearchIcon"
 
 interface Props {
    skills:Skill[]
@@ -37,24 +38,10 @@ const Filters:FC<Props> = ({
          <AnimatePresence mode="wait">
             {!show_search ?
                (
-                  <motion.div
-                     initial={{
-                        y: -60
-                     }}
-                     animate={{
-                        y: 0
-                     }}
-                     exit={{
-                        y: -60,
-                     }}
-                     key={"search-btn"}
-                  >
-                     <BiSearch
-                        onClick={() => setShowSearch(!show_search)}
-                        size={35}
-                        className={"cursor-pointer hover:text-yellow-400 duration-200 shrink-0 " + (darkMode ? "" : "text-black")}
-                     />
-                  </motion.div>
+                  <SearchIcon
+                     setShowSearch={setShowSearch}
+                     show_search={show_search}
+                  />
                ) : (
                   <motion.div
                      initial={{
