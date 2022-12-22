@@ -54,10 +54,13 @@ export default function Home() {
          active: true,
          name: "vue"
       },
+      {
+         active: true,
+         name: "gatsby"
+      },
    ])
    const [showSelf, setShowSelf] = useState(true) 
-   const [showTutorial, setShowTutorial] = useState(true) 
-   const {darkMode} = useAppSelector(state => state.theme)
+   const [showTutorial, setShowTutorial] = useState(true)
 
    const data = [
       {

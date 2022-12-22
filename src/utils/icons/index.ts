@@ -4,7 +4,12 @@ import {
    IoLogoVue,
    IoLogoCss3,
 } from "react-icons/io5"
-import { SiSolidity, SiNextdotjs, SiTypescript } from "react-icons/si"
+import { 
+   SiSolidity, 
+   SiNextdotjs, 
+   SiTypescript,
+   SiGatsby
+} from "react-icons/si"
 
 export default {
    firebase: IoLogoFirebase,
@@ -13,5 +18,6 @@ export default {
    solidity: SiSolidity,
    nextjs: SiNextdotjs,
    typescript: SiTypescript,
+   gatsby: SiGatsby,
    css: IoLogoCss3,
 }

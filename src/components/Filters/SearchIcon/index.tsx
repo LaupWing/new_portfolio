@@ -27,10 +27,10 @@ const SearchIcon:React.FC<Props> = ({ setShowSearch, show_search }) => {
          <BiSearch
             onClick={() => setShowSearch(!show_search)}
             size={35}
-            className={"cursor-pointer hover:text-yellow-400 duration-200 shrink-0 " + 
+            className={"cursor-pointer duration-200 shrink-0 " + 
                (darkMode ? 
-                  "" : 
-                  "text-black"
+                  "hover:text-pink-500" : 
+                  "text-black hover:text-yellow-400"
                )
             }
          />
