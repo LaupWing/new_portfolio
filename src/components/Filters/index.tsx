@@ -72,8 +72,8 @@ const Filters:FC<Props> = ({
                   tutorial
                </button>
             </div>) :
-            (<div>
-               <input type="text" />
+            (<div className="border-2 flex overflow-hidden border-black rounded-md shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]">
+               <input type="text" className="flex-1 py-1 px-2" />
             </div>)
          }
       </nav>
