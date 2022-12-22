@@ -29,7 +29,7 @@ const Filters:FC<Props> = ({
    const [show_search, setShowSearch] = useState(false)
 
    return (
-      <nav className={"px-5 my-2 h-20 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start shrink-0 overflow-x-auto duration-200 sticky overflow-hidden top-0 z-50 " + (
+      <nav className={"px-5 m-2 h-20 max-w-7xl w-full mx-auto text-accent flex items-center space-x-4 justify-start shrink-0 overflow-x-auto duration-200 sticky overflow-hidden top-0 z-50 " + (
          darkMode ? 
             "bg-background-primary" :
             "bg-white"

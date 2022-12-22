@@ -6,7 +6,7 @@ const Message = () => {
    const {darkMode} = useAppSelector(state => state.theme)
 
    return (
-      <div className={`lg:p-5 z-50 mb-2 lg:text-base sm:mx-auto mx-2 p-2 text-sm rounded-lg max-w-xl flex flex-col mt-10 ${
+      <div className={`lg:p-5 z-50 mb-2 lg:text-base sm:mx-auto mx-4 p-2 text-sm rounded-lg max-w-xl flex flex-col mt-10 ${
          darkMode ? 
             "border border-accent shadow shadow-accent text-accent" :
             "border-2 bg-yellow-300 border-black shadow-[5px_5px_0px_2px_rgba(0,0,0,1)]"
