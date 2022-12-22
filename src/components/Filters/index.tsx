@@ -1,4 +1,5 @@
-import React, { FC, useState } from "react"
+import { FC, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import { BiBomb, BiSearch } from "react-icons/bi"
 import { toast } from "react-toastify"
 import { useAppSelector } from "src/app/hooks"
@@ -36,50 +37,76 @@ const Filters:FC<Props> = ({
             size={35}
             className={"cursor-pointer hover:text-yellow-400 duration-200 shrink-0 " + (darkMode ? "" : "text-black")}
          />
-         {show_search ? 
-            (
-               <div className="flex items-center space-x-4">
-                  <BiBomb 
-                     size={35}
-                     className={"shrink-0 " + (darkMode ? "" : "text-black")}
-                  />
-                  {skills.map(skill=>(
-                     <SkillCmp
-                        key={skill.name}
-                        name={skill.name}
-                        active={skill.active}
-                        onClick={()=>{
-                           toggle(skill.name)
-                           toast(<p>{!skill.active ? "Show": "Hide"} <b>{skill.name}</b></p>)
-                        }}
+         <AnimatePresence exitBeforeEnter>
+            {show_search ? 
+               (
+                  <motion.div 
+                     initial={{
+                        y: 100
+                     }}
+                     animate={{
+                        y: 0
+                     }}
+                     exit={{
+                        y: 100
+                     }}
+                     key={"filters"}
+                     className="flex items-center space-x-4"
+                  >
+                     <BiBomb 
+                        size={35}
+                        className={"shrink-0 " + (darkMode ? "" : "text-black")}
                      />
-                  ))}
-                  <button 
-                     className={"text-sm rounded-full shrink-0 duration-200 w-20 text-center border-2 py-0.5 uppercase font-bold font-serif tracking-widest " + 
-                        (showSelf ? "bg-teal-500 text-white " : "text-teal-500 opacity-30 ") +
-                        (darkMode ? "border-teal-400" : "border-black shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]")
-                     }
-                     onClick={()=> setShowSelf(prev => !prev)}
+                     {skills.map(skill=>(
+                        <SkillCmp
+                           key={skill.name}
+                           name={skill.name}
+                           active={skill.active}
+                           onClick={()=>{
+                              toggle(skill.name)
+                              toast(<p>{!skill.active ? "Show": "Hide"} <b>{skill.name}</b></p>)
+                           }}
+                        />
+                     ))}
+                     <button 
+                        className={"text-sm rounded-full shrink-0 duration-200 w-20 text-center border-2 py-0.5 uppercase font-bold font-serif tracking-widest " + 
+                           (showSelf ? "bg-teal-500 text-white " : "text-teal-500 opacity-30 ") +
+                           (darkMode ? "border-teal-400" : "border-black shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]")
+                        }
+                        onClick={()=> setShowSelf(prev => !prev)}
+                     >
+                        Self
+                     </button>
+                     <button 
+                        className={"text-sm duration-200 shrink-0 rounded-full w-20 text-center py-0.5 uppercase border-2 font-bold font-serif tracking-widest " + 
+                           (showTutorial ? "bg-indigo-500 text-white " : "text-indigo-500 opacity-30 ") +
+                           (darkMode ? "border-indigo-500" : "border-black shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]")
+                        }
+                        onClick={()=> setShowTutorial(prev => !prev)}
+                     >
+                        tutorial
+                     </button>
+                  </motion.div>
+               ) :
+               (
+                  <motion.div 
+                     initial={{
+                        y: -100
+                     }}
+                     animate={{
+                        y: 0
+                     }}
+                     exit={{
+                        y: -100,
+                     }}
+                     key={"search"}
+                     className="border-2 flex overflow-hidden border-black rounded-md shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]"
                   >
-                     Self
-                  </button>
-                  <button 
-                     className={"text-sm duration-200 shrink-0 rounded-full w-20 text-center py-0.5 uppercase border-2 font-bold font-serif tracking-widest " + 
-                        (showTutorial ? "bg-indigo-500 text-white " : "text-indigo-500 opacity-30 ") +
-                        (darkMode ? "border-indigo-500" : "border-black shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]")
-                     }
-                     onClick={()=> setShowTutorial(prev => !prev)}
-                  >
-                     tutorial
-                  </button>
-               </div>
-            ) :
-            (
-               <div className="border-2 flex overflow-hidden border-black rounded-md shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]">
-                  <input type="text" className="flex-1 py-1 px-2" />
-               </div>
-            )
-         }
+                     <input type="text" className="flex-1 py-1 px-2" />
+                  </motion.div>
+               )
+            }
+         </AnimatePresence>
       </nav>
    )
 }
