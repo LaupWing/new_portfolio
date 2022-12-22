@@ -48,7 +48,14 @@ const Overlay = () => {
                duration: 0.25,
             }}
          >
-            <AiFillGithub size={50} className="text-white cursor-pointer hover:text-pink-500"/>
+            <AiFillGithub 
+               size={50} 
+               className={"cursor-pointer hover:text-pink-500 " + (
+                  darkMode ? 
+                     "text-white" :
+                     "text-yellow-400"
+               )}
+            />
          </motion.div>
       </motion.div>
    )
