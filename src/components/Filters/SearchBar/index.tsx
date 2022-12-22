@@ -13,7 +13,7 @@ const Search = () => {
             y: -100,
          }}
          key={"search"}
-         className="border-2 w-full max-w-sm flex overflow-hidden border-black rounded-md shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]"
+         className="border-2 w-full max-w-sm flex overflow-hidden border-accent rounded-md shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]"
       >
          <input type="text" className="flex-1 py-1 px-2" />
       </motion.div>
