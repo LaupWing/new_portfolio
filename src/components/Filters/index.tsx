@@ -4,7 +4,7 @@ import { BiSearch } from "react-icons/bi"
 import { useAppSelector } from "src/app/hooks"
 import { Skill } from "typings"
 import Skills from "./Skills"
-import Search from "./Search"
+import SearchBar from "./SearchBar"
 import { motion } from "framer-motion"
 
 interface Props {
@@ -89,7 +89,7 @@ const Filters:FC<Props> = ({
                   />
                ) :
                (
-                  <Search/>
+                  <SearchBar/>
                )
             }
          </AnimatePresence>
