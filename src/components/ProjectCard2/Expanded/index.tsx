@@ -46,7 +46,7 @@ const Expanded:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
                      )
                   }
                />
-               <div className="flex items-start justify-between my-4">
+               <div className="flex items-center justify-between my-4">
                   <div className="flex">
                      {skills.map((s, i) => (
                         <Skill
