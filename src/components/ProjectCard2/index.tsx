@@ -26,6 +26,7 @@ const ProjectCard:React.FC<Props> = ({
                skills={skills}
                tutorial={tutorial}
                active_skills={active_skills}
+               setExpanded={setExpanded}
             />
          ) :(
             <Normal

@@ -1,5 +1,6 @@
 import { Variants, motion } from "framer-motion"
 import { useState } from "react"
+import { IoCloseSharp } from "react-icons/io5"
 import { useAppSelector } from "src/app/hooks"
 import { Skills } from "typings"
 import Skill from "./Skill"
@@ -9,9 +10,10 @@ interface Props {
    tutorial: boolean
    image: string
    active_skills: string[]
+   setExpanded: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Expanded:React.FC<Props> = ({ skills, tutorial, image }) => {
+const Expanded:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
    const [hover, setHover] = useState(false) 
    const {darkMode} = useAppSelector(state => state.theme)
    
@@ -32,6 +34,16 @@ const Expanded:React.FC<Props> = ({ skills, tutorial, image }) => {
             }}
          >
             <div className="absolute inset-0 duration-500 flex flex-col">
+               <IoCloseSharp
+                  onClick={() => setExpanded(false)}
+                  size={35}
+                  className={"cursor-pointer ml-auto mb-2 hover:text-red-400 duration-200 shrink-0 " + 
+                     (darkMode ? 
+                        "" : 
+                        "text-black"
+                     )
+                  }
+               />
                <div className="flex items-start justify-between">
                   <div className="flex">
                      {skills.map((s, i) => (
