@@ -42,6 +42,20 @@ export default defineType({
          description: "Is credentials needed?"
       }),
       defineField({
+         name: "username",
+         title: "Username",
+         type: "string",
+         description: "Demonstration account's username",
+         hidden: ({document}) => !document?.credentials
+      }),
+      defineField({
+         name: "password",
+         title: "Password",
+         type: "string",
+         description: "Demonstration account's password",
+         hidden: ({document}) => !document?.credentials
+      }),
+      defineField({
          name: "url",
          title: "Url",
          type: "url",
