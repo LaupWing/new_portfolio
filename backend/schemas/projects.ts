@@ -36,6 +36,12 @@ export default defineType({
          description: "Is this project made from a tutorial"
       }),
       defineField({
+         name: "credentials",
+         title: "Credentials",
+         type: "boolean",
+         description: "Is credentials needed?"
+      }),
+      defineField({
          name: "url",
          title: "Url",
          type: "url",
