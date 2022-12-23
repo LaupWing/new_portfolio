@@ -1,5 +1,5 @@
 import { Variants, motion } from "framer-motion"
-import { useState } from "react"
+import React, { useState } from "react"
 import { useAppSelector } from "src/app/hooks"
 import { Skills } from "typings"
 import Overlay from "./Overlay"
@@ -10,6 +10,7 @@ interface Props {
    tutorial: boolean
    image: string
    active_skills: string[]
+   setExpanded: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const projectVariant: Variants = {
@@ -17,7 +18,7 @@ const projectVariant: Variants = {
    show: {  top: 0, opacity: 1 }
  }
 
-const Normal:React.FC<Props> = ({ skills, tutorial, image }) => {
+const Normal:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
    const [hover, setHover] = useState(false) 
    const {darkMode} = useAppSelector(state => state.theme)
    
@@ -32,6 +33,7 @@ const Normal:React.FC<Props> = ({ skills, tutorial, image }) => {
          }
          onMouseOver={()=> setHover(true)}
          onMouseOut={()=> setHover(false)}
+         onClick={() => setExpanded(true)}
          variants={projectVariant}
       >
          {hover && <Overlay/>}
