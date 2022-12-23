@@ -37,14 +37,14 @@ const Expanded:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
                <IoCloseSharp
                   onClick={() => setExpanded(false)}
                   size={35}
-                  className={"cursor-pointer ml-auto mb-2 hover:text-red-400 duration-200 shrink-0 " + 
+                  className={"cursor-pointer ml-auto hover:text-red-400 duration-200 shrink-0 " + 
                      (darkMode ? 
                         "" : 
                         "text-black"
                      )
                   }
                />
-               <div className="flex items-start justify-between">
+               <div className="flex items-start justify-between my-4">
                   <div className="flex">
                      {skills.map((s, i) => (
                         <Skill
@@ -65,7 +65,7 @@ const Expanded:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
                      )
                      :  (
                         <p 
-                           className={"text-sm bg-teal-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest " +
+                           className={"text-base bg-teal-500 text-white rounded-full w-24 text-center py-0.5 uppercase font-bold font-serif tracking-widest " +
                            (darkMode ? "" : "border-2 border-black")
                         }
                         >
