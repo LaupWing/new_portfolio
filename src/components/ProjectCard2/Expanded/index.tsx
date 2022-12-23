@@ -11,12 +11,13 @@ interface Props {
    active_skills: string[]
 }
 
-const Normal:React.FC<Props> = ({ skills, tutorial, image }) => {
+const Expanded:React.FC<Props> = ({ skills, tutorial, image }) => {
    const [hover, setHover] = useState(false) 
    const {darkMode} = useAppSelector(state => state.theme)
    
    return (
       <motion.div 
+         layoutId="expandable-card"
          className={`overflow-hidden relative duration-200 max-w-sm p-4 rounded-2xl ${
             darkMode ? 
                "bg-background-secundair border-accent border text-accent" : 
@@ -78,4 +79,4 @@ const Normal:React.FC<Props> = ({ skills, tutorial, image }) => {
    )
 }
 
-export default Normal
+export default Expanded

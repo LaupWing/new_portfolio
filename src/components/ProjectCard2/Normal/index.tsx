@@ -23,6 +23,7 @@ const Normal:React.FC<Props> = ({ skills, tutorial, image }) => {
    
    return (
       <motion.div 
+         layoutId="expandable-card"
          className={`overflow-hidden relative duration-200 max-w-sm p-4 rounded-2xl ${
             darkMode ? 
                "bg-background-secundair border-accent border text-accent" : 
