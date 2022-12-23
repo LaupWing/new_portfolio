@@ -1,5 +1,5 @@
 import Head from "next/head"
-import ProjectCard from "../components/ProjectCard2"
+import ProjectCard from "../components/ProjectCard"
 import Filters from "../components/Filters"
 import { Project, Skill } from "typings"
 import { useState } from "react"
