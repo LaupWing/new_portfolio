@@ -3,6 +3,8 @@ import { useState } from "react"
 import { IoCloseSharp } from "react-icons/io5"
 import { useAppSelector } from "src/app/hooks"
 import { Skills } from "typings"
+import Desktop from "./Desktop/Desktop"
+import Mobile from "./Mobile"
 import Skill from "./Skill"
 
 interface Props {
@@ -73,18 +75,8 @@ const Expanded:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
                         </p>
                      )}
                </div>
-               <h1 className="font-serif text-5xl tracking-wider">
-                  ProjectCard
-               </h1>
-               <p className="text-lg mt-1 line-clamp-3">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
-                  sit doloribus ab ipsa maiores ad dolorum.
-               </p>
-               <img
-                  src={image}
-                  className="aspect-video w-full object-cover rounded mt-4"
-                  alt="Project image"
-               />
+               <Mobile image={image}/>
+               <Desktop image={image}/>
             </div>
          </div>
       </motion.div>
