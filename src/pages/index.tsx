@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css"
 import { useAppSelector } from "src/app/hooks"
 import Message from "src/components/Message"
 import { GetServerSideProps } from "next"
+import { client } from "src/sanity"
 
 const mainContainerVariants: Variants = {
    hidden: {
@@ -25,7 +26,7 @@ const mainContainerVariants: Variants = {
       }
    }
  }
-export default function Home() {
+export default function Home({projects}:any) {
    const [filters, setFilters] = useState<Skill[]>([
       {
          active: true,
@@ -122,6 +123,7 @@ export default function Home() {
       },
    ] as Project[]
    
+   console.log(projects)
 
    const active_skills = filters
       .filter(f => f.active)
@@ -189,10 +191,12 @@ export default function Home() {
 
 
 export const getServerSideProps:GetServerSideProps = async () =>{
-   
+   const projects_query = "*[_type == 'projects']"
+   const projects = await client.fetch(projects_query)
+
    return {
       props: {
-
+         projects
       }
    }
 } 
