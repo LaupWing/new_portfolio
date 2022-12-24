@@ -7,6 +7,7 @@ import { motion, Variants, AnimatePresence } from "framer-motion"
 import "react-toastify/dist/ReactToastify.css"
 import { useAppSelector } from "src/app/hooks"
 import Message from "src/components/Message"
+import { GetServerSideProps } from "next"
 
 const mainContainerVariants: Variants = {
    hidden: {
@@ -185,3 +186,13 @@ export default function Home() {
       </div>
    )
 }
+
+
+export const getServerSideProps:GetServerSideProps = async () =>{
+   
+   return {
+      props: {
+
+      }
+   }
+} 
