@@ -18,9 +18,7 @@ const ProjectCard:React.FC<Props> = ({
       <AnimateSharedLayout>
          {expanded ? (
             <Expanded
-               image={image}
-               skills={skills}
-               tutorial={tutorial}
+               project={project}
                active_skills={active_skills}
                setExpanded={setExpanded}
             />

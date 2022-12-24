@@ -1,22 +1,19 @@
-import { Variants, motion } from "framer-motion"
-import { useState } from "react"
+import { motion } from "framer-motion"
 import { IoCloseSharp } from "react-icons/io5"
 import { useAppSelector } from "src/app/hooks"
-import { Skills } from "typings"
+import { urlFor } from "src/sanity"
+import { Project } from "typings"
 import Desktop from "./Desktop/Desktop"
 import Mobile from "./Mobile"
 import Skill from "./Skill"
 
 interface Props {
-   skills: Skills[]
-   tutorial: boolean
-   image: string
+   project: Project,
    active_skills: string[]
    setExpanded: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Expanded:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
-   const [hover, setHover] = useState(false) 
+const Expanded:React.FC<Props> = ({ project, setExpanded }) => {
    const {darkMode} = useAppSelector(state => state.theme)
    
    return (
@@ -48,7 +45,7 @@ const Expanded:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
                />
                <div className="flex items-center justify-between my-4">
                   <div className="flex">
-                     {skills.map((s, i) => (
+                     {project.skills.map((s, i) => (
                         <Skill
                            index={i}
                            key={i}
@@ -56,7 +53,7 @@ const Expanded:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
                         />
                      ))}
                   </div>
-                  {  tutorial 
+                  {  project.tutorial 
                      ? (
                         <p className={
                            "text-base bg-indigo-500 text-white rounded-full w-24 text-center py-0.5 uppercase font-bold font-serif tracking-widest " + 
@@ -75,8 +72,8 @@ const Expanded:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
                         </p>
                      )}
                </div>
-               <Mobile image={image}/>
-               <Desktop image={image}/>
+               <Mobile image={urlFor(project.image).url()}/>
+               <Desktop image={urlFor(project.image).url()}/>
             </div>
          </div>
       </motion.div>
