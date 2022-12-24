@@ -1,20 +1,16 @@
 import { AnimateSharedLayout } from "framer-motion"
 import React, { useState } from "react"
-import { Skills } from "typings"
+import { Project, Skills } from "typings"
 import Expanded from "./Expanded"
 import Normal from "./Normal"
 
 interface Props {
-   skills: Skills[]
-   tutorial: boolean
-   image: string
+   project: Project,
    active_skills: string[]
 }
 
 const ProjectCard:React.FC<Props> = ({
-   skills,
-   tutorial,
-   image,
+   project,
    active_skills
 }) => {
    const [expanded, setExpanded] = useState(false)
@@ -30,9 +26,7 @@ const ProjectCard:React.FC<Props> = ({
             />
          ) :(
             <Normal
-               image={image}
-               skills={skills}
-               tutorial={tutorial}
+               project={project}
                active_skills={active_skills}
                setExpanded={setExpanded}
             />

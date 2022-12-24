@@ -25,7 +25,9 @@ const mainContainerVariants: Variants = {
          when: "beforeChildren"
       }
    }
- }
+}
+
+
 export default function Home({projects}:any) {
    const [filters, setFilters] = useState<Skill[]>([
       {
@@ -129,9 +131,9 @@ export default function Home({projects}:any) {
       .filter(f => f.active)
       .map(f => f.name)
 
-   const projects_filtered = data
-      .filter(project => project.skills.find(skill => active_skills.includes(skill)))
-      .filter(project => {
+   const projects_filtered = projects
+      .filter((project:any) => project.skills.find((skill:any) => active_skills.includes(skill)))
+      .filter((project:any) => {
          if(showSelf && showTutorial){
             return project
          }else if (showSelf && !showTutorial){
@@ -174,11 +176,9 @@ export default function Home({projects}:any) {
             exit="hidden"
          >  
             <AnimatePresence>
-               {projects_filtered.map((d, i)=>(
+               {projects_filtered.map((d:any, i:number)=>(
                   <ProjectCard
-                     skills={d.skills}
-                     tutorial={d.tutorial}
-                     image={d.image}
+                     project={d}
                      key={d.id}
                      active_skills={active_skills}
                   />

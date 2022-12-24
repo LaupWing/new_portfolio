@@ -1,14 +1,13 @@
 import { Variants, motion } from "framer-motion"
 import React, { useState } from "react"
 import { useAppSelector } from "src/app/hooks"
-import { Skills } from "typings"
+import { urlFor } from "src/sanity"
+import { Project, Skills } from "typings"
 import Overlay from "./Overlay"
 import Skill from "./Skill"
 
 interface Props {
-   skills: Skills[]
-   tutorial: boolean
-   image: string
+   project: Project
    active_skills: string[]
    setExpanded: React.Dispatch<React.SetStateAction<boolean>>
 }
@@ -18,7 +17,7 @@ const projectVariant: Variants = {
    show: {  top: 0, opacity: 1 }
  }
 
-const Normal:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
+const Normal:React.FC<Props> = ({ project, setExpanded }) => {
    const [hover, setHover] = useState(false) 
    const {darkMode} = useAppSelector(state => state.theme)
    
@@ -46,7 +45,7 @@ const Normal:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
             <div className={"absolute inset-0 duration-500 flex flex-col justify-between " + (hover ? "blur" : "" )}>
                <div className="flex items-start justify-between">
                   <div className="flex">
-                     {skills.map((s, i) => (
+                     {project.skills.map((s, i) => (
                         <Skill
                            index={i}
                            key={i}
@@ -54,7 +53,7 @@ const Normal:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
                         />
                      ))}
                   </div>
-                  {  tutorial 
+                  {  project.tutorial 
                      ? (
                         <p className={
                            "text-sm bg-indigo-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest " + 
@@ -81,7 +80,7 @@ const Normal:React.FC<Props> = ({ skills, tutorial, image, setExpanded }) => {
                   sit doloribus ab ipsa maiores ad dolorum.
                </p>
                <img
-                  src={image}
+                  src={urlFor(project.image).url()}
                   className="aspect-video w-full object-cover rounded mt-4"
                   alt="Project image"
                />
