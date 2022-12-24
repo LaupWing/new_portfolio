@@ -19,62 +19,55 @@ const Expanded:React.FC<Props> = ({ project, setExpanded }) => {
    return (
       <motion.div 
          layoutId="expandable-card"
-         className={`overflow-hidden fixed w-screen h-screen inset-0 duration-200 z-50 p-4 ${
+         className={`overflow-y-auto fixed w-screen h-screen inset-0 duration-200 z-50 p-4 ${
             darkMode ? 
                "bg-background-secundair border-accent border text-accent" : 
                "bg-emerald-300 border-2 border-black hover:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] shadow-[10px_10px_0px_2px_rgba(0,0,0,1)]" 
             }`
          }
       >
-         <div
-            className="relative"
-            style={{
-               paddingBottom: "115%",
-            }}
-         >
-            <div className="absolute inset-0 duration-500 flex flex-col">
-               <IoCloseSharp
-                  onClick={() => setExpanded(false)}
-                  size={35}
-                  className={"cursor-pointer ml-auto hover:text-red-400 duration-200 shrink-0 " + 
-                     (darkMode ? 
-                        "" : 
-                        "text-black"
-                     )
-                  }
-               />
-               <div className="flex items-center justify-between my-4">
-                  <div className="flex">
-                     {project.skills.map((s, i) => (
-                        <Skill
-                           index={i}
-                           key={i}
-                           name={s}
-                        />
-                     ))}
-                  </div>
-                  {  project.tutorial 
-                     ? (
-                        <p className={
-                           "text-base bg-indigo-500 text-white rounded-full w-24 text-center py-0.5 uppercase font-bold font-serif tracking-widest " + 
-                           (darkMode ? "" : "border-2 border-black")
-                        }>
-                           tutorial
-                        </p>
-                     )
-                     :  (
-                        <p 
-                           className={"text-base bg-teal-500 text-white rounded-full w-24 text-center py-0.5 uppercase font-bold font-serif tracking-widest " +
-                           (darkMode ? "" : "border-2 border-black")
-                        }
-                        >
-                           Self
-                        </p>
-                     )}
+         <div className="flex flex-col">
+            <IoCloseSharp
+               onClick={() => setExpanded(false)}
+               size={35}
+               className={"cursor-pointer ml-auto hover:text-red-400 duration-200 shrink-0 " + 
+                  (darkMode ? 
+                     "" : 
+                     "text-black"
+                  )
+               }
+            />
+            <div className="flex items-center justify-between my-4">
+               <div className="flex">
+                  {project.skills.map((s, i) => (
+                     <Skill
+                        index={i}
+                        key={i}
+                        name={s}
+                     />
+                  ))}
                </div>
-               <Mobile image={urlFor(project.image).url()}/>
-               <Desktop image={urlFor(project.image).url()}/>
+               {  project.tutorial 
+                  ? (
+                     <p className={
+                        "text-base bg-indigo-500 text-white rounded-full w-24 text-center py-0.5 uppercase font-bold font-serif tracking-widest " + 
+                        (darkMode ? "" : "border-2 border-black")
+                     }>
+                        tutorial
+                     </p>
+                  )
+                  :  (
+                     <p 
+                        className={"text-base bg-teal-500 text-white rounded-full w-24 text-center py-0.5 uppercase font-bold font-serif tracking-widest " +
+                        (darkMode ? "" : "border-2 border-black")
+                     }
+                     >
+                        Self
+                     </p>
+                  )}
             </div>
+            <Mobile project={project}/>
+            <Desktop project={project}/>
          </div>
       </motion.div>
    )
