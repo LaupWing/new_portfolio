@@ -176,10 +176,10 @@ export default function Home({projects}:any) {
             exit="hidden"
          >  
             <AnimatePresence>
-               {projects_filtered.map((d:any, i:number)=>(
+               {projects_filtered.map((d:any)=>(
                   <ProjectCard
                      project={d}
-                     key={d.id}
+                     key={d._id}
                      active_skills={active_skills}
                   />
                ))}
