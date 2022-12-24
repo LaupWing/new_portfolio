@@ -15,22 +15,20 @@ const ProjectCard:React.FC<Props> = ({
 }) => {
    const [expanded, setExpanded] = useState(false)
    return (
-      <AnimateSharedLayout>
-         {expanded ? (
-            <Expanded
-               project={project}
-               active_skills={active_skills}
-               setExpanded={setExpanded}
-            />
-         ) :(
-            <Normal
-               project={project}
-               active_skills={active_skills}
-               setExpanded={setExpanded}
-            />
-         )
-         }
-      </AnimateSharedLayout>
+      expanded ? (
+         <Expanded
+            project={project}
+            active_skills={active_skills}
+            setExpanded={setExpanded}
+         />
+      ) :(
+         <Normal
+            project={project}
+            active_skills={active_skills}
+            setExpanded={setExpanded}
+         />
+      )
+         
    )
 }
 
