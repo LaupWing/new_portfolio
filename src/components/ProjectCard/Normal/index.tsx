@@ -73,11 +73,10 @@ const Normal:React.FC<Props> = ({ project, setExpanded }) => {
                      )}
                </div>
                <h1 className="font-serif text-xl tracking-wider">
-                  ProjectCard
+                  {project.name}
                </h1>
                <p className="text-xs mt-1 line-clamp-3">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
-                  sit doloribus ab ipsa maiores ad dolorum.
+                  {project.description}
                </p>
                <img
                   src={urlFor(project.image).url()}
