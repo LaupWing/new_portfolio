@@ -14,4 +14,6 @@ export interface Project {
    tutorial: boolean
    images: string[]
    id: string
+   github: string
+   url: string
 }

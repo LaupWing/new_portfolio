@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React from "react"
 import { GoEye } from "react-icons/go"
 import { SiGithub } from "react-icons/si"
@@ -16,7 +17,13 @@ const Desktop:React.FC<Props> = ({project}) => {
          />
          <div className="flex flex-col px-4 mt-2">
             <div className="flex space-x-4">
-               <SiGithub className="cursor-pointer hover:text-pink-500" size={30}/>
+               <Link 
+                  href={project.github} 
+                  rel="noopener noreferrer" 
+                  target="_blank"
+               >
+                  <SiGithub className="cursor-pointer hover:text-pink-500" size={30}/>
+               </Link>
                <GoEye className="cursor-pointer hover:text-pink-500" size={30}/>
             </div>
             <h1 className="font-serif text-5xl tracking-wider">{project.name}</h1>
