@@ -12,6 +12,7 @@ interface Props {
    toggle: (skill: string) => void
    showSelf: boolean
    setShowSelf: React.Dispatch<React.SetStateAction<boolean>>
+   setSearch: React.Dispatch<React.SetStateAction<string>>
    toggleAll: Function
    showTutorial: boolean
    setShowTutorial: React.Dispatch<React.SetStateAction<boolean>>
@@ -22,6 +23,7 @@ const Filters:FC<Props> = ({
    toggle, 
    showSelf, 
    setShowSelf, 
+   setSearch, 
    showTutorial,
    setShowTutorial,
    toggleAll
@@ -64,7 +66,9 @@ const Filters:FC<Props> = ({
                   />
                ) :
                (
-                  <SearchBar/>
+                  <SearchBar
+                     setSearch={setSearch}
+                  />
                )
             }
          </AnimatePresence>

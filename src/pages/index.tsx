@@ -65,6 +65,7 @@ export default function Home({projects}:any) {
       },
    ])
    const [showSelf, setShowSelf] = useState(true) 
+   const [search, setSearch] = useState("") 
    const [showTutorial, setShowTutorial] = useState(true)
    const [play] = useSound("/assets/sounds/bomb.mp3", {
       volume: 0.2
@@ -100,6 +101,7 @@ export default function Home({projects}:any) {
       .map(f => f.name)
 
    const projects_filtered = projects
+      .filter((project:any) => project.name.toLowerCase().includes(search.toLowerCase()))
       .filter((project:any) => project.skills.find((skill:any) => active_skills.includes(skill)))
       .filter((project:any) => {
          if(showSelf && showTutorial){
@@ -123,6 +125,7 @@ export default function Home({projects}:any) {
             skills={filters}
             showSelf={showSelf}
             showTutorial={showTutorial}
+            setSearch={setSearch}
             toggleAll={toggleAll}
             setShowSelf={setShowSelf}
             setShowTutorial={setShowTutorial}

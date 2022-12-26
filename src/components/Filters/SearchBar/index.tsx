@@ -1,7 +1,11 @@
 import { motion } from "framer-motion"
 import { useAppSelector } from "src/app/hooks"
 
-const Search = () => {
+interface Props {
+   setSearch: React.Dispatch<React.SetStateAction<string>>
+}
+
+const Search: React.FC<Props> = ({ setSearch }) => {
    const { darkMode } = useAppSelector(state => state.theme)
 
    return (
@@ -27,6 +31,7 @@ const Search = () => {
          <input 
             type="text" 
             className="flex-1 py-1 px-2 focus:outline-none" 
+            onChange={e => setSearch(e.target.value)}
          />
       </motion.div>
    )
