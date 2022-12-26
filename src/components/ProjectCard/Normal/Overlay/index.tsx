@@ -8,7 +8,7 @@ const Overlay = () => {
 
    return (
       <motion.div 
-         className="absolute inset-0 z-50 flex justify-center items-center flex-col space-y-10"
+         className="absolute cursor-pointer inset-0 z-50 flex justify-center items-center flex-col space-y-10"
          initial={{
             scale: 1.5,
             opacity: 0
@@ -23,6 +23,20 @@ const Overlay = () => {
             stiffness: 120
          }}
       >
+         <motion.p
+            className="absolute bg-pink-100 px-2 rounded bg-opacity-70 top-4 text-center text-pink-400 font-bold uppercase"
+            initial={{
+               y: -20,
+            }}
+            animate={{
+               y: 0,
+            }}
+            transition={{
+               delay: 0.2
+            }}
+         >
+            Click me to learn more 🖱️ 
+         </motion.p>
          <motion.div
             whileHover={{
                scale: [1, 0.85],
