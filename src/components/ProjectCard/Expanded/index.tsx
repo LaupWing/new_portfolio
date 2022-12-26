@@ -6,6 +6,7 @@ import { Project } from "typings"
 import Desktop from "./Desktop/Desktop"
 import Mobile from "./Mobile"
 import Skill from "./Skill"
+import {SanityImageSource} from "@sanity/image-url/lib/types/types"
 
 interface Props {
    project: Project,
@@ -15,6 +16,12 @@ interface Props {
 
 const Expanded:React.FC<Props> = ({ project, setExpanded }) => {
    const {darkMode} = useAppSelector(state => state.theme)
+   const images = project.images
+      .map((img: SanityImageSource) => urlFor(img as string).url())
+      .map((x:string)=>({
+         original: x,
+         thumbnail: x,
+      }))
    
    return (
       <motion.div 
