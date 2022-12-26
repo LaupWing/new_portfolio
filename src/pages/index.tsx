@@ -67,7 +67,28 @@ export default function Home({projects}:any) {
    const [showTutorial, setShowTutorial] = useState(true)
    
    const toggleAll = () =>{
-      console.log(filters.filter(x=>x.active).length)
+      const extra_filters = 2
+      const total = filters.length + extra_filters
+      const total_active = filters.filter(x=>x.active).length +
+         (showSelf ? 1 : 0) + 
+         (showTutorial ? 1 : 0)  
+
+      const setAll = (state:boolean) => {
+         setFilters(filters.map(x => ({...x, active: state})))
+         setShowTutorial(state)
+         setShowSelf(state)
+      } 
+
+      if(total_active === (total / 2)){
+         const random = Math.random() > 0.5
+         setAll(random)
+      }
+      else if(total_active > (total / 2)){
+         setAll(false)
+      }else{
+         setAll(true)
+      }
+
    } 
 
    const active_skills = filters
