@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css"
 import Message from "src/components/Message"
 import { GetServerSideProps } from "next"
 import { client } from "src/sanity"
-// import bomb_sound from "/sounds/bomb.mp3"
 import useSound from "use-sound"
 
 const mainContainerVariants: Variants = {
