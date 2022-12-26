@@ -20,7 +20,7 @@ const projectVariant: Variants = {
 const Normal:React.FC<Props> = ({ project, setExpanded }) => {
    const [hover, setHover] = useState(false) 
    const {darkMode} = useAppSelector(state => state.theme)
-   
+   console.log(project)
    return (
       <motion.div 
          layoutId="expandable-card"
@@ -79,7 +79,7 @@ const Normal:React.FC<Props> = ({ project, setExpanded }) => {
                   {project.description}
                </p>
                <img
-                  src={urlFor(project.image).url()}
+                  src={urlFor(project.images[0]).url()}
                   className="aspect-video w-full object-cover rounded mt-4"
                   alt="Project image"
                />

@@ -12,6 +12,6 @@ export interface Project {
    name: string
    description: string
    tutorial: boolean
-   image: string
+   images: string[]
    id: string
 }
