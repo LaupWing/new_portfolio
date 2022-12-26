@@ -8,6 +8,8 @@ import "react-toastify/dist/ReactToastify.css"
 import Message from "src/components/Message"
 import { GetServerSideProps } from "next"
 import { client } from "src/sanity"
+import bomb_sound from "../sounds/bomb.mp3"
+import useSound from "use-sound"
 
 const mainContainerVariants: Variants = {
    hidden: {
@@ -64,6 +66,7 @@ export default function Home({projects}:any) {
    ])
    const [showSelf, setShowSelf] = useState(true) 
    const [showTutorial, setShowTutorial] = useState(true)
+   const [] = useSound(bomb_sound)
    
    const toggleAll = () =>{
       const extra_filters = 2
