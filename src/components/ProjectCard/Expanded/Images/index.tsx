@@ -14,7 +14,7 @@ const Images:React.FC<Props> = ({images}) => {
          thumbnail: x,
       }))
    return (
-      <div className="w-1/2 flex-shrink-0">
+      <div className="md:w-1/2 md:mb-0 mb-2 w-full flex-shrink-0">
          <ImageGallery items={_images} />
       </div>
    )
