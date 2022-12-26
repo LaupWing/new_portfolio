@@ -13,9 +13,8 @@ const ProjectCard:React.FC<Props> = ({
    project,
    active_skills
 }) => {
-   console.log(project)
    const [expanded, setExpanded] = useState(false)
-   // return (<div>test</div>)
+   
    return (
       expanded ? (
          <Expanded

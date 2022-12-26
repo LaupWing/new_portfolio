@@ -1,4 +1,5 @@
 import "../styles/globals.css"
+import "react-image-gallery/styles/css/image-gallery.css"
 import type { AppProps } from "next/app"
 import Layout from "../components/Layout"
 import { ToastContainer } from "react-toastify"
