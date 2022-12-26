@@ -20,7 +20,7 @@ const projectVariant: Variants = {
 const Normal:React.FC<Props> = ({ project, setExpanded }) => {
    const [hover, setHover] = useState(false) 
    const {darkMode} = useAppSelector(state => state.theme)
-   console.log(project)
+   
    return (
       <motion.div 
          layoutId="expandable-card"

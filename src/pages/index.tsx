@@ -67,7 +67,7 @@ export default function Home({projects}:any) {
    const [showTutorial, setShowTutorial] = useState(true)
    
    const toggleAll = () =>{
-
+      console.log(filters.filter(x=>x.active).length)
    } 
 
    const active_skills = filters

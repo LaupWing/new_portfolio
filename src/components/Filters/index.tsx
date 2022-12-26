@@ -1,12 +1,9 @@
 import { FC, useState } from "react"
 import { AnimatePresence } from "framer-motion"
-import { BiSearch } from "react-icons/bi"
 import { useAppSelector } from "src/app/hooks"
 import { Skill } from "typings"
 import Skills from "./Skills"
 import SearchBar from "./SearchBar"
-import { motion } from "framer-motion"
-import { IoCloseSharp } from "react-icons/io5"
 import SearchIcon from "./SearchIcon"
 import CloseIcon from "./CloseIcon"
 
