@@ -15,6 +15,7 @@ interface Props {
    toggle: (skill: string) => void
    showSelf: boolean
    setShowSelf: React.Dispatch<React.SetStateAction<boolean>>
+   toggleAll: Function
    showTutorial: boolean
    setShowTutorial: React.Dispatch<React.SetStateAction<boolean>>
 }
@@ -25,7 +26,8 @@ const Filters:FC<Props> = ({
    showSelf, 
    setShowSelf, 
    showTutorial,
-   setShowTutorial 
+   setShowTutorial,
+   toggleAll
 }) => {
    const {darkMode} = useAppSelector(state => state.theme)
    const [show_search, setShowSearch] = useState(false)
@@ -60,6 +62,7 @@ const Filters:FC<Props> = ({
                      showSelf={showSelf}
                      showTutorial={showTutorial}
                      skills={skills}
+                     toggleAll={toggleAll}
                      toggle={toggle}
                   />
                ) :

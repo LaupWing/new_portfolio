@@ -12,10 +12,19 @@ interface Props {
    showSelf: boolean
    setShowSelf: React.Dispatch<React.SetStateAction<boolean>>
    showTutorial: boolean
+   toggleAll: Function
    setShowTutorial: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Skills:FC<Props> = ({skills, toggle, showSelf, setShowSelf, setShowTutorial, showTutorial}) => {
+const Skills:FC<Props> = ({
+   skills, 
+   toggle, 
+   showSelf, 
+   setShowSelf, 
+   setShowTutorial, 
+   showTutorial,
+   toggleAll
+}) => {
    const { darkMode } = useAppSelector(state => state.theme)
    return (
       <motion.div 
@@ -33,7 +42,8 @@ const Skills:FC<Props> = ({skills, toggle, showSelf, setShowSelf, setShowTutoria
       >
          <BiBomb 
             size={35}
-            className={"shrink-0 " + (darkMode ? "" : "text-black")}
+            className={"shrink-0 cursor-pointer duration-200 hover:text-pink-500 " + (darkMode ? "" : "text-black")}
+            onClick={()=> toggleAll()}
          />
          {skills.map(skill=>(
             <SkillCmp

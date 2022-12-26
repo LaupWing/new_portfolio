@@ -65,67 +65,10 @@ export default function Home({projects}:any) {
    ])
    const [showSelf, setShowSelf] = useState(true) 
    const [showTutorial, setShowTutorial] = useState(true)
-
-   const data = [
-      {
-         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
-         name: "projectcard",
-         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css", "firebase", "react"],
-         tutorial: false,
-         id: "2"
-      },
-      {
-         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
-         name: "projectcard",
-         image: "https://editors.dexerto.com/wp-content/uploads/2022/12/01/UI-Ran-Out-of-Room-Error-Apex-Legends.jpg",
-         skills: ["css"],
-         tutorial: true,
-         id: "3"
-      },
-      {
-         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
-         name: "projectcard",
-         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"],
-         tutorial: false,
-         id: "23"
-      },
-      {
-         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
-         name: "projectcard",
-         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"],
-         tutorial: false,
-         id: "211"
-      },
-      {
-         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
-         name: "projectcard",
-         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"],
-         tutorial: true,
-         id: "2222w2"
-      },
-      {
-         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
-         name: "projectcard",
-         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"],
-         tutorial: false,
-         id: "2ewqeqw"
-      },
-      {
-         description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim nam iure tempore similique.",
-         name: "projectcard",
-         image: "https://miro.medium.com/max/1400/1*5FF-WiNYehgcBgtgAka1Og.png",
-         skills: ["css"],
-         tutorial: false,
-         id: "25534543"
-      },
-   ] as Project[]
    
-   console.log(projects)
+   const toggleAll = () =>{
+
+   } 
 
    const active_skills = filters
       .filter(f => f.active)
@@ -155,6 +98,7 @@ export default function Home({projects}:any) {
             skills={filters}
             showSelf={showSelf}
             showTutorial={showTutorial}
+            toggleAll={toggleAll}
             setShowSelf={setShowSelf}
             setShowTutorial={setShowTutorial}
             toggle={(skill: string)=>{
