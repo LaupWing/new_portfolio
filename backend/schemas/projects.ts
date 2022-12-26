@@ -18,10 +18,15 @@ export default defineType({
          description: "Description of the project",
       }),
       defineField({
-         name: "image",
-         title: "Image",
-         type: "image",
-         description: "Example project image"
+         name: "images",
+         title: "Images",
+         type: "array",
+         of:[
+            {
+               type: "image"
+            }
+         ],
+         description: "Project images"
       }),
       defineField({
          name: "github",
