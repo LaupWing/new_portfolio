@@ -103,6 +103,18 @@ export default defineType({
                   value: "typescript"
                },
                {
+                  title: "Wordpress", 
+                  value: "wordpress"
+               },
+               {
+                  title: "Gatsby", 
+                  value: "gatsby"
+               },
+               {
+                  title: "Tailwind", 
+                  value: "tailwind"
+               },
+               {
                   title: "Css", 
                   value: "css"
                },
