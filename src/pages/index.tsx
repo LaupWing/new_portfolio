@@ -67,7 +67,7 @@ export default function Home({projects}:any) {
    const [search, setSearch] = useState("") 
    const [showTutorial, setShowTutorial] = useState(true)
    const [play] = useSound("/assets/sounds/bomb.mp3", {
-      volume: 0.2
+      volume: 0.05
    })
    
    const toggleAll = () =>{

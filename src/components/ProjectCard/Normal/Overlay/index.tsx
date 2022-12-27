@@ -24,7 +24,11 @@ const Overlay = () => {
          }}
       >
          <motion.p
-            className="absolute bg-pink-100 px-2 rounded bg-opacity-70 top-4 text-center text-pink-400 font-bold uppercase"
+            className={"absolute bg-pink-100 px-2 rounded bg-opacity-70 top-4 text-center font-bold uppercase " + (
+               darkMode ?
+                  "text-violet-500" : 
+                  "text-pink-400"
+            )}
             initial={{
                y: -20,
             }}
@@ -49,7 +53,7 @@ const Overlay = () => {
                size={50} 
                className={"cursor-pointer hover:text-pink-500 " + (
                   darkMode ? 
-                     "text-white" :
+                     "text-indigo-500" :
                      "text-yellow-400"
                )}
             />
@@ -66,7 +70,7 @@ const Overlay = () => {
                size={50} 
                className={"cursor-pointer hover:text-pink-500 " + (
                   darkMode ? 
-                     "text-white" :
+                     "text-indigo-500" :
                      "text-yellow-400"
                )}
             />
