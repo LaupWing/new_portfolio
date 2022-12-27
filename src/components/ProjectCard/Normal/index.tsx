@@ -22,8 +22,7 @@ const Normal:React.FC<Props> = ({ project, setExpanded }) => {
    const {darkMode} = useAppSelector(state => state.theme)
    
    return (
-      <motion.div 
-         layoutId="expandable-card"
+      <motion.div
          className={`overflow-hidden relative duration-200 max-w-sm p-4 rounded-2xl ${
             darkMode ? 
                "bg-background-secundair border-accent border text-accent" : 

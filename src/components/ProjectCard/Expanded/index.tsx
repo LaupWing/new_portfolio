@@ -16,16 +16,9 @@ interface Props {
 
 const Expanded:React.FC<Props> = ({ project, setExpanded }) => {
    const {darkMode} = useAppSelector(state => state.theme)
-   const images = project.images
-      .map((img: SanityImageSource) => urlFor(img as string).url())
-      .map((x:string)=>({
-         original: x,
-         thumbnail: x,
-      }))
    
    return (
-      <motion.div 
-         layoutId="expandable-card"
+      <motion.div
          className={`overflow-y-auto fixed w-screen h-screen inset-0 duration-200 z-50 p-4 ${
             darkMode ? 
                "bg-background-secundair border-accent border text-accent" : 

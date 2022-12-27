@@ -13,7 +13,7 @@ export interface Project {
    description: string
    tutorial: boolean
    images: string[]
-   id: string
+   _id: string
    github: string
    url: string
 }
