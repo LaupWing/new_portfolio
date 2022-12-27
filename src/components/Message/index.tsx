@@ -13,7 +13,7 @@ const Message = () => {
       }`}>
          <IoIosClose className="ml-auto cursor-pointer hover:text-pink-500 duration-200" size={30}/>
          <p className="mb-0.5">Dear stranger,</p>
-         <p>Welcome to my portfolio website. Feel free to look around. You can use the filter buttons below this message to... well to filter out projects.</p>
+         <p>Welcome to my portfolio website. Feel free to look around. You can use the filter buttons below this message to... well to filter out projects. In the top right corner you can toggle between a diffrent style.</p>
          <button 
             className={`border duration-200 border-accent  ml-auto mt-2 rounded px-2 uppercase text-sm font-bold py-1 hover:bg-pink-500 hover:text-white ${
                darkMode ?
