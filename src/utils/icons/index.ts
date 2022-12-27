@@ -3,12 +3,14 @@ import {
    IoLogoReact,
    IoLogoVue,
    IoLogoCss3,
+   IoLogoWordpress
 } from "react-icons/io5"
 import { 
    SiSolidity, 
    SiNextdotjs, 
    SiTypescript,
-   SiGatsby
+   SiGatsby,
+   SiTailwindcss
 } from "react-icons/si"
 
 export default {
@@ -20,4 +22,6 @@ export default {
    typescript: SiTypescript,
    gatsby: SiGatsby,
    css: IoLogoCss3,
+   tailwind: SiTailwindcss,
+   wordpress: IoLogoWordpress,
 }
