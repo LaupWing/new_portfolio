@@ -2,13 +2,15 @@ import Head from "next/head"
 import ProjectCard from "../components/ProjectCard"
 import Filters from "../components/Filters"
 import { Skill } from "typings"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion, Variants, AnimatePresence } from "framer-motion"
 import "react-toastify/dist/ReactToastify.css"
 import Message from "src/components/Message"
 import { GetServerSideProps } from "next"
 import { client } from "src/sanity"
 import useSound from "use-sound"
+import { useAppDispatch } from "src/app/hooks"
+import { setDarkmode } from "src/slices/themeSlice"
 
 const mainContainerVariants: Variants = {
    hidden: {
@@ -69,6 +71,7 @@ export default function Home({projects}:any) {
    const [play] = useSound("/assets/sounds/bomb.mp3", {
       volume: 0.05
    })
+   const dispatch = useAppDispatch()
    
    const toggleAll = () =>{
       const extra_filters = 2
@@ -94,6 +97,12 @@ export default function Home({projects}:any) {
       }
       play()
    } 
+
+   useEffect(() => {
+      if(window.localStorage.getItem("darkMode")){
+         dispatch(setDarkmode(JSON.parse(localStorage.getItem("darkMode")!)))
+      }
+   }, [])
 
    const active_skills = filters
       .filter(f => f.active)
