@@ -15,7 +15,7 @@ interface Props {
 const projectVariant: Variants = {
    hidden: {  top: 50, opacity: 0 },
    show: {  top: 0, opacity: 1 }
- }
+}
 
 const Normal:React.FC<Props> = ({ project, setExpanded }) => {
    const [hover, setHover] = useState(false) 
@@ -31,7 +31,10 @@ const Normal:React.FC<Props> = ({ project, setExpanded }) => {
          }
          onMouseOver={()=> setHover(true)}
          onMouseOut={()=> setHover(false)}
-         onClick={() => setExpanded(true)}
+         onClick={() => {
+            setHover(false)
+            setExpanded(true)
+         }}
          variants={projectVariant}
       >
          {hover && <Overlay/>}

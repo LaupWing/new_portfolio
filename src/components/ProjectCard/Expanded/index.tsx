@@ -1,12 +1,15 @@
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { IoCloseSharp } from "react-icons/io5"
 import { useAppSelector } from "src/app/hooks"
-import { urlFor } from "src/sanity"
 import { Project } from "typings"
 import Desktop from "./Desktop/Desktop"
 import Mobile from "./Mobile"
 import Skill from "./Skill"
-import {SanityImageSource} from "@sanity/image-url/lib/types/types"
+
+const projectVariant: Variants = {
+   hidden: {  scale: 0, opacity: 0 },
+   show: {  scale: 1, opacity: 1 }
+}
 
 interface Props {
    project: Project,
@@ -25,6 +28,7 @@ const Expanded:React.FC<Props> = ({ project, setExpanded }) => {
                "bg-emerald-300 border-2 border-black hover:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] shadow-[10px_10px_0px_2px_rgba(0,0,0,1)]" 
             }`
          }
+         variants={projectVariant}
       >
          <div className="flex flex-col">
             <IoCloseSharp
