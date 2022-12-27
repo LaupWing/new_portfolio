@@ -1,4 +1,4 @@
-import { AnimateSharedLayout } from "framer-motion"
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion"
 import React, { useState } from "react"
 import { Project, Skills } from "typings"
 import Expanded from "./Expanded"
@@ -16,20 +16,21 @@ const ProjectCard:React.FC<Props> = ({
    const [expanded, setExpanded] = useState(false)
    
    return (
-      expanded ? (
-         <Expanded
-            project={project}
-            active_skills={active_skills}
-            setExpanded={setExpanded}
-         />
-      ) :(
-         <Normal
-            project={project}
-            active_skills={active_skills}
-            setExpanded={setExpanded}
-         />
-      )
-         
+      <AnimatePresence mode="wait">
+         {expanded ? (
+            <Expanded
+               project={project}
+               active_skills={active_skills}
+               setExpanded={setExpanded}
+            />
+         ) :(
+            <Normal
+               project={project}
+               active_skills={active_skills}
+               setExpanded={setExpanded}
+            />
+         )}  
+      </AnimatePresence>
    )
 }
 
