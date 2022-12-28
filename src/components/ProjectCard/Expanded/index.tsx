@@ -7,8 +7,8 @@ import Mobile from "./Mobile"
 import Skill from "./Skill"
 
 const projectVariant: Variants = {
-   hidden: {  scale: 0, opacity: 0 },
-   show: {  scale: 1, opacity: 1 }
+   hidden: {  x: "100%", opacity: 0 },
+   show: {  x: 0, opacity: 1 }
 }
 
 interface Props {
