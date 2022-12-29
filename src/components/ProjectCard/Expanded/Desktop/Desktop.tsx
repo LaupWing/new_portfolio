@@ -1,7 +1,4 @@
-import Link from "next/link"
 import React from "react"
-import { GoEye } from "react-icons/go"
-import { SiGithub } from "react-icons/si"
 import { Project } from "typings"
 import Images from "../Images"
 import Links from "../Links"
@@ -11,6 +8,7 @@ interface Props {
 }
 
 const Desktop:React.FC<Props> = ({project}) => {
+   console.log(project)
    return (
       <div className="hidden md:flex">
          <Images
@@ -21,6 +19,9 @@ const Desktop:React.FC<Props> = ({project}) => {
                github={project.github}
                url={project.url}
             />
+            {project.credentials && <p>
+
+            </p>}
             <h1 className="font-serif text-5xl tracking-wider">{project.name}</h1>
             <p className="text-lg mt-1">
                {project.description}

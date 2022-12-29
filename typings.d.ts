@@ -16,4 +16,7 @@ export interface Project {
    _id: string
    github: string
    url: string
+   credentials?: boolean
+   username?: string
+   password?: string
 }
