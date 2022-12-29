@@ -115,7 +115,7 @@ export default function Home({projects}:any) {
          if(showSelf && showTutorial){
             return project
          }else if (showSelf && !showTutorial){
-            return project.tutorial === false
+            return !project.tutorial
          }else if (!showSelf && showTutorial){
             return project.tutorial === true
          }

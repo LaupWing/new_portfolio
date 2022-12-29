@@ -8,6 +8,7 @@ interface Props {
 }
 
 const Desktop:React.FC<Props> = ({project}) => {
+   console.log(project)
    return (
       <div className="hidden md:flex">
          <Images
