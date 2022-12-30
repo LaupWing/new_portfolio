@@ -62,6 +62,10 @@ export default function Home({projects}:any) {
       },
       {
          active: true,
+         name: "wordpress"
+      },
+      {
+         active: true,
          name: "gatsby"
       },
    ])
