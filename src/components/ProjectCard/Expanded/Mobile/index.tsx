@@ -1,5 +1,6 @@
 import React from "react"
 import { Project } from "typings"
+import Credentials from "../Credentials"
 import Images from "../Images"
 import Links from "../Links"
 
@@ -16,6 +17,9 @@ const Mobile:React.FC<Props> = ({project}) => {
             github={project.github}
             url={project.url}
          />
+         {project.credentials && 
+            <Credentials project={project}/>
+         }
          <h1 className="font-serif text-5xl tracking-wider">{project.name}</h1>
          <p className="text-lg mt-1">
             {project.description}
