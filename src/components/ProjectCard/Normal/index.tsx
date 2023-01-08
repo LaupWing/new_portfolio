@@ -84,11 +84,13 @@ const Normal:React.FC<Props> = ({ project, setExpanded }) => {
                <p className="text-xs mt-1 line-clamp-3">
                   {project.description}
                </p>
-               <img
-                  src={urlFor(project.images[0]).url()}
-                  className="aspect-video w-full object-cover rounded mt-4"
-                  alt="Project image"
-               />
+               <div className="relative">
+                  <img
+                     src={urlFor(project.images[0]).url()}
+                     className="aspect-video w-full object-cover rounded mt-4"
+                     alt="Project image"
+                  />
+               </div>
             </div>
          </div>
       </motion.div>
