@@ -85,7 +85,7 @@ const Normal:React.FC<Props> = ({ project, setExpanded }) => {
                   {project.description}
                </p>
                <div className="relative mt-4">
-                  <p className="absolute top-0 left-0 text-indigo-500 bg-white px-2 text-sm shadow">{project.date}</p>
+                  <p className="absolute rounded-tl-md rounded-br-md bg-opacity-80  top-0 left-0 text-indigo-500 bg-white px-2 text-sm shadow">{project.date}</p>
                   <img
                      src={urlFor(project.images[0]).url()}
                      className="aspect-video w-full object-cover rounded"
