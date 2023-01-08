@@ -10,6 +10,7 @@ export interface Skill {
 export interface Project {
    skills: Skills[]
    name: string
+   date: string
    description: string
    tutorial: boolean
    images: string[]
