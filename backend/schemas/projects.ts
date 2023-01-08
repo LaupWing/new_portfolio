@@ -18,6 +18,12 @@ export default defineType({
          description: "Description of the project",
       }),
       defineField({
+         name: "date",
+         title: "Date",
+         type: "date",
+         description: "Date of creation project",
+      }),
+      defineField({
          name: "images",
          title: "Images",
          type: "array",
