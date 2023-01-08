@@ -14,7 +14,8 @@ const Desktop:React.FC<Props> = ({project}) => {
          <Images
             images={project.images}
          />
-         <div className="flex flex-col px-4 mt-2">
+         <div className="flex flex-col px-4">
+            <p className="uppercase text-xs font-bold mb-2 opacity-50">Created at: {project.date}</p>
             <Links
                github={project.github}
                url={project.url}
