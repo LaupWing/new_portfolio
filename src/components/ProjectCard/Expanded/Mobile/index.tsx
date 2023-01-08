@@ -12,6 +12,7 @@ const Mobile:React.FC<Props> = ({project}) => {
    return (
       <div className="md:hidden flex flex-col">
          <Images images={project.images}/>
+         <p className="uppercase text-xs font-bold mb-2 opacity-50">Created at: {project.date}</p>
          <Links
             className="my-4"
             github={project.github}
