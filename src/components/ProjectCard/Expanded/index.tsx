@@ -35,9 +35,9 @@ const Expanded:React.FC<Props> = ({ project, setExpanded }) => {
                onClick={() => setExpanded(false)}
                size={35}
                className={"cursor-pointer ml-auto hover:text-red-400 duration-200 shrink-0 " + 
-                  (darkMode ? 
-                     "" : 
-                     "text-black"
+                  (darkMode 
+                     ? "" 
+                     : "text-black"
                   )
                }
             />
@@ -55,7 +55,10 @@ const Expanded:React.FC<Props> = ({ project, setExpanded }) => {
                   ? (
                      <p className={
                         "text-base bg-indigo-500 text-white rounded-full w-24 text-center py-0.5 uppercase font-bold font-serif tracking-widest " + 
-                        (darkMode ? "" : "border-2 border-black")
+                           (darkMode 
+                              ? "" 
+                              : "border-2 border-black"
+                           )
                      }>
                         tutorial
                      </p>
@@ -63,7 +66,10 @@ const Expanded:React.FC<Props> = ({ project, setExpanded }) => {
                   :  (
                      <p 
                         className={"text-base bg-teal-500 text-white rounded-full w-24 text-center py-0.5 uppercase font-bold font-serif tracking-widest " +
-                        (darkMode ? "" : "border-2 border-black")
+                           (darkMode 
+                              ? "" 
+                              : "border-2 border-black"
+                           )
                      }
                      >
                         Self
