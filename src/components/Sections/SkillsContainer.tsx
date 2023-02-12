@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Skill } from "typings"
+import { SkillType } from "typings"
 import { motion } from "framer-motion"
 import { BiBomb } from "react-icons/bi"
 import { useAppSelector } from "src/app/hooks"
@@ -7,7 +7,7 @@ import { useAppSelector } from "src/app/hooks"
 import { toast } from "react-toastify"
 
 interface Props {
-   skills:Skill[]
+   skills:SkillType[]
    toggle: (skill: string) => void
    showSelf: boolean
    setShowSelf: React.Dispatch<React.SetStateAction<boolean>>

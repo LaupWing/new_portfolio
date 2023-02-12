@@ -2,7 +2,7 @@ import Icons from "./src/utils/skills"
 
 export type Skills = keyof typeof Icons
 
-export interface Skill {
+export interface SkillType {
    name: Skills
    active: boolean
 }
