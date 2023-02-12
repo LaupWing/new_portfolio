@@ -2,7 +2,7 @@ import { Variants, motion } from "framer-motion"
 import React, { useState } from "react"
 import { useAppSelector } from "src/app/hooks"
 import { urlFor } from "src/sanity"
-import { Project, Skills } from "typings"
+import { Project } from "typings"
 import Overlay from "./Overlay"
 import Skill from "./Skill"
 
