@@ -1,10 +1,10 @@
+import type { AppProps } from "next/app"
 import "../styles/globals.css"
 import "react-image-gallery/styles/css/image-gallery.css"
-import type { AppProps } from "next/app"
-import Layout from "../components/Layout"
 import { ToastContainer } from "react-toastify"
 import { Provider } from "react-redux"
 import { store } from "src/app/store"
+import { Layout } from "src/components/Globals"
 
 export default function App({ Component, pageProps }: AppProps) {
    return (
