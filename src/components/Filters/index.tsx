@@ -2,9 +2,9 @@ import { FC, useState } from "react"
 import { AnimatePresence } from "framer-motion"
 import { useAppSelector } from "src/app/hooks"
 import { Skill } from "typings"
-import Skills from "./Skills"
 import { IconClose, IconSearch } from "../Icons"
 import { SearchBar } from "../Elements"
+import { SkillsContainer } from "../Sections"
 
 interface Props {
    skills:Skill[]
@@ -54,7 +54,7 @@ const Filters:FC<Props> = ({
          <AnimatePresence mode="wait">
             {!show_search ? 
                (
-                  <Skills
+                  <SkillsContainer
                      setShowSelf={setShowSelf}
                      setShowTutorial={setShowTutorial}
                      showSelf={showSelf}
