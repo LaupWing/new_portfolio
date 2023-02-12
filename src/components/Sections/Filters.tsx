@@ -4,7 +4,7 @@ import { useAppSelector } from "src/app/hooks"
 import { SkillType } from "typings"
 import { IconClose, IconSearch } from "../Icons"
 import { SearchBar } from "../Elements"
-import { SkillsContainer } from "."
+import { SkillsContainer } from "../Containers"
 
 interface Props {
    skills:SkillType[]
