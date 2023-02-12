@@ -21,7 +21,7 @@ export const SearchBar: React.FC<Props> = ({ setSearch }) => {
          }}
          key={"search"}
          className={
-            "border-2 w-full max-w-sm flex overflow-hidden  rounded-md " +
+            "border-2 w-full max-w-sm flex overflow-hidden rounded-md " +
             (darkMode ? 
                "border-accent" :
                "border-black shadow-[2px_2px_0px_1px_rgba(0,0,0,1)]"   

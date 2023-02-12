@@ -9,7 +9,6 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai"
 interface Props {
    project: Project
    active_skills: string[]
-   setExpanded: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const projectVariant: Variants = {
@@ -17,7 +16,7 @@ const projectVariant: Variants = {
    show: {  top: 0, opacity: 1 }
 }
 
-const Normal:React.FC<Props> = ({ project, setExpanded }) => {
+export const ProjectCard:React.FC<Props> = ({ project }) => {
    const [hover, setHover] = useState(false) 
    const {darkMode} = useAppSelector(state => state.theme)
    
@@ -37,11 +36,10 @@ const Normal:React.FC<Props> = ({ project, setExpanded }) => {
          onMouseOut={()=> setHover(false)}
          onClick={() => {
             setHover(false)
-            setExpanded(true)
          }}
          variants={projectVariant}
       >
-         {hover && <Overlay/>}
+         {hover && <ProjectCardOverlay/>}
          <div
             className="relative"
             style={{
@@ -98,8 +96,6 @@ const Normal:React.FC<Props> = ({ project, setExpanded }) => {
    )
 }
 
-export default Normal
-
 interface SkillProps {
    name: Skills
    index: number
@@ -122,7 +118,7 @@ const Skill:React.FC<SkillProps> = ({ name, index }) => {
 }
 
 
-const Overlay = () => {
+const ProjectCardOverlay = () => {
    const { darkMode } = useAppSelector(state => state.theme)
 
    return (
