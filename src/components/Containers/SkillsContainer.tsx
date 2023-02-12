@@ -3,8 +3,8 @@ import { SkillType } from "typings"
 import { motion } from "framer-motion"
 import { BiBomb } from "react-icons/bi"
 import { useAppSelector } from "src/app/hooks"
-// import SkillCmp from "./Skill"
 import { toast } from "react-toastify"
+import { Skill } from "../Elements"
 
 interface Props {
    skills:SkillType[]
@@ -45,8 +45,8 @@ export const SkillsContainer:FC<Props> = ({
             className={"shrink-0 cursor-pointer duration-200 hover:text-pink-500 " + (darkMode ? "" : "text-black")}
             onClick={()=> toggleAll()}
          />
-         {/* {skills.map(skill=>(
-            <SkillCmp
+         {skills.map(skill=>(
+            <Skill
                key={skill.name}
                name={skill.name}
                active={skill.active}
@@ -55,7 +55,7 @@ export const SkillsContainer:FC<Props> = ({
                   toast(<p>{!skill.active ? "Show": "Hide"} <b>{skill.name}</b></p>)
                }}
             />
-         ))} */}
+         ))}
          <button 
             className={"text-sm rounded-full shrink-0 duration-200 w-20 text-center border-2 py-0.5 uppercase font-bold font-serif tracking-widest " + 
                (showSelf ? "bg-teal-500 text-white " : "text-teal-500 opacity-30 ") +

@@ -8,7 +8,7 @@ interface Props {
    onClick: () => void
 }
 
-const Skill:FC<Props> = ({ name, active, onClick }) => {
+export const Skill:FC<Props> = ({ name, active, onClick }) => {
    const Icon = (icons as any)[name]
    const {darkMode} = useAppSelector(state => state.theme)
    
@@ -30,5 +30,3 @@ const Skill:FC<Props> = ({ name, active, onClick }) => {
       </div>
    )
 }
-
-export default Skill
