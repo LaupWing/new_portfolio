@@ -5,7 +5,6 @@ import { Skill } from "typings"
 import Skills from "./Skills"
 import SearchBar from "./SearchBar"
 import SearchIcon from "./SearchIcon"
-import CloseIcon from "./CloseIcon"
 import { IconClose, IconSearch } from "../Icons"
 
 interface Props {
