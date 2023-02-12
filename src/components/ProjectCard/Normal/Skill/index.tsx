@@ -1,6 +1,6 @@
 import React from "react"
 import { useAppSelector } from "src/app/hooks"
-import icons from "src/utils/icons"
+import icons from "src/utils/skills"
 import { Skills } from "typings"
 interface Props {
    name: Skills

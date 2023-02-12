@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { useAppSelector } from "src/app/hooks"
-import icons from "src/utils/icons"
+import icons from "src/utils/skills"
 
 interface Props {
    name: string,

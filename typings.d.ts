@@ -1,4 +1,4 @@
-import Icons from "./src/utils/icons"
+import Icons from "./src/utils/skills"
 
 export type Skills = keyof typeof Icons
 
