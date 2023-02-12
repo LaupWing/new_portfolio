@@ -1,12 +1,10 @@
 import { Switch } from "@headlessui/react"
-import { useState } from "react"
 import { useAppDispatch, useAppSelector } from "src/app/hooks"
 import { setDarkmode } from "src/slices/themeSlice"
 
 const Toggle = () => {
    const { darkMode } = useAppSelector(state => state.theme)
    const dispatch = useAppDispatch()
-
 
    return (
       <Switch
