@@ -6,6 +6,7 @@ import Skills from "./Skills"
 import SearchBar from "./SearchBar"
 import SearchIcon from "./SearchIcon"
 import CloseIcon from "./CloseIcon"
+import { IconClose, IconSearch } from "../Icons"
 
 interface Props {
    skills:Skill[]
@@ -40,12 +41,12 @@ const Filters:FC<Props> = ({
          <AnimatePresence mode="wait">
             {!show_search ?
                (
-                  <SearchIcon
+                  <IconSearch
                      setShowSearch={setShowSearch}
                      show_search={show_search}
                   />
                ) : (
-                  <CloseIcon
+                  <IconClose
                      setShowSearch={setShowSearch}
                      show_search={show_search}
                   />
