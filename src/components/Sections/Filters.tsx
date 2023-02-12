@@ -4,7 +4,7 @@ import { useAppSelector } from "src/app/hooks"
 import { SkillType } from "typings"
 import { IconClose, IconSearch } from "../Icons"
 import { SearchBar } from "../Elements"
-import { SkillsContainer } from "../Sections"
+import { SkillsContainer } from "."
 
 interface Props {
    skills:SkillType[]
@@ -17,7 +17,7 @@ interface Props {
    setShowTutorial: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Filters:FC<Props> = ({ 
+export const Filters:FC<Props> = ({ 
    skills, 
    toggle, 
    showSelf, 
@@ -74,5 +74,3 @@ const Filters:FC<Props> = ({
       </nav>
    )
 }
-
-export default Filters
