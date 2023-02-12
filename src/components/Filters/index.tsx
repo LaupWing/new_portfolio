@@ -3,8 +3,8 @@ import { AnimatePresence } from "framer-motion"
 import { useAppSelector } from "src/app/hooks"
 import { Skill } from "typings"
 import Skills from "./Skills"
-import SearchBar from "./SearchBar"
 import { IconClose, IconSearch } from "../Icons"
+import { SearchBar } from "../Elements"
 
 interface Props {
    skills:Skill[]

@@ -5,7 +5,7 @@ interface Props {
    setSearch: React.Dispatch<React.SetStateAction<string>>
 }
 
-const Search: React.FC<Props> = ({ setSearch }) => {
+export const SearchBar: React.FC<Props> = ({ setSearch }) => {
    const { darkMode } = useAppSelector(state => state.theme)
 
    return (
@@ -36,5 +36,3 @@ const Search: React.FC<Props> = ({ setSearch }) => {
       </motion.div>
    )
 }
-
-export default Search
