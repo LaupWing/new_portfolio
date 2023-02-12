@@ -1,7 +1,6 @@
 import Head from "next/head"
 import ProjectCard from "../components/ProjectCard"
-import Filters from "../components/Filters"
-import { Skill } from "typings"
+import { SkillType } from "typings"
 import { useEffect, useState } from "react"
 import { motion, Variants, AnimatePresence } from "framer-motion"
 import "react-toastify/dist/ReactToastify.css"
@@ -11,6 +10,7 @@ import { client } from "src/sanity"
 import useSound from "use-sound"
 import { useAppDispatch } from "src/app/hooks"
 import { setDarkmode } from "src/slices/themeSlice"
+import { Filters } from "src/components/Sections"
 
 const mainContainerVariants: Variants = {
    hidden: {
@@ -31,7 +31,7 @@ const mainContainerVariants: Variants = {
 
 
 export default function Home({projects}:any) {
-   const [filters, setFilters] = useState<Skill[]>([
+   const [filters, setFilters] = useState<SkillType[]>([
       {
          active: true,
          name: "firebase"
