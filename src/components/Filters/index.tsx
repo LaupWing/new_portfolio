@@ -4,7 +4,6 @@ import { useAppSelector } from "src/app/hooks"
 import { Skill } from "typings"
 import Skills from "./Skills"
 import SearchBar from "./SearchBar"
-import SearchIcon from "./SearchIcon"
 import { IconClose, IconSearch } from "../Icons"
 
 interface Props {
