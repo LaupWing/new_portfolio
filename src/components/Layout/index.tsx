@@ -1,7 +1,7 @@
 import { FC } from "react"
 import { GoBrowser } from "react-icons/go"
 import { useAppSelector } from "src/app/hooks"
-import Toggle from "./Toggle"
+import { Toggle } from "../Elements"
 
 interface Props {
    children?: React.ReactNode
@@ -25,7 +25,7 @@ const Layout: FC<Props> = ({ children }) => {
                <GoBrowser size={30}/>
             </div>
             <div className="flex items-center space-x-2 text-white">
-               <Toggle/>
+               <Toggle />
             </div>
          </header>
          {children}
