@@ -1,26 +1,28 @@
-import { ElementType, FC } from "react"
+import clsx from "clsx"
+import { ElementType, FC, PropsWithChildren } from "react"
 import { useAppSelector } from "src/app/hooks"
 
-interface TextLabelProps {
+interface TextLabelProps extends PropsWithChildren {
    as?: ElementType
    className?: string
    text: string
 }
 
-const TextLabel:FC<TextLabelProps> = ({
+export const TextLabel:FC<TextLabelProps> = ({
    as: Component = "span",
-   text,
-   className
+   className,
+   children
 }) => {
    const {darkMode} = useAppSelector(state => state.theme)
+   const styles = clsx(
+      "text-sm text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest",
+      className,
+      darkMode && "border-2 border-black"
+   )
 
    return (
-      <Component className={
-         "text-sm text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest " + 
-         (darkMode ? "" : "border-2 border-black")
-      }>
-         {text}
+      <Component className={styles}>
+         { children }
       </Component>
    )
 }
-export default TextLabel
