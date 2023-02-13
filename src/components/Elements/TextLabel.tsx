@@ -5,7 +5,6 @@ import { useAppSelector } from "src/app/hooks"
 interface TextLabelProps extends PropsWithChildren {
    as?: ElementType
    className?: string
-   text: string
 }
 
 export const TextLabel:FC<TextLabelProps> = ({

@@ -5,6 +5,7 @@ import { urlFor } from "src/sanity"
 import { Project, Skills } from "typings"
 import icons from "src/utils/skills"
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
+import { TextLabel } from "../Elements"
 
 interface Props {
    project: Project
@@ -59,21 +60,14 @@ export const ProjectCard:React.FC<Props> = ({ project }) => {
                   </div>
                   {  project.tutorial 
                      ? (
-                        <p className={
-                           "text-sm bg-indigo-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest " + 
-                           (darkMode ? "" : "border-2 border-black")
-                        }>
+                        <TextLabel className="bg-indigo-500">
                            tutorial
-                        </p>
+                        </TextLabel>
                      )
                      :  (
-                        <p 
-                           className={"text-sm bg-teal-500 text-white rounded-full w-20 text-center py-0.5 uppercase font-bold font-serif tracking-widest " +
-                           (darkMode ? "" : "border-2 border-black")
-                        }
-                        >
+                        <TextLabel className="bg-teal-500">
                            Self
-                        </p>
+                        </TextLabel>
                      )}
                </div>
                <h1 className="font-serif text-xl tracking-wider">
