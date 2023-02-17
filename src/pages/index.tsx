@@ -110,7 +110,7 @@ export default function Home({projects}:any) {
       .filter(f => f.active)
       .map(f => f.name)
 
-   const projects_filtered = projects
+   const projectsFiltered = projects
       .filter((project:any) => project.name.toLowerCase().includes(search.toLowerCase()))
       .filter((project:any) => project.skills.find((skill:any) => active_skills.includes(skill)))
       .filter((project:any) => {
@@ -158,7 +158,7 @@ export default function Home({projects}:any) {
             exit="hidden"
          >  
             <AnimatePresence>
-               {projects_filtered.map((d:any)=>(
+               {projectsFiltered.map((d:any)=>(
                   <ProjectCard
                      project={d}
                      key={d._id}
