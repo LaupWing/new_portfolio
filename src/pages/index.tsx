@@ -1,5 +1,4 @@
 import Head from "next/head"
-import ProjectCard from "../components/ProjectCard"
 import { SkillType } from "typings"
 import { useEffect, useState } from "react"
 import { motion, Variants, AnimatePresence } from "framer-motion"
@@ -9,6 +8,7 @@ import useSound from "use-sound"
 import { useAppDispatch } from "src/app/hooks"
 import { setDarkmode } from "src/slices/themeSlice"
 import { Filters, Message } from "src/components/Sections"
+import { ProjectCard } from "src/components/Cards"
 
 const mainContainerVariants: Variants = {
    hidden: {

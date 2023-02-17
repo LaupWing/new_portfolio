@@ -12,7 +12,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
    const projectDetail = await client.fetch(projectQuery, {
       projectSlug
    })
-   console.log(ProjectDetail)
+   console.log(projectDetail)
 
    return {
       props: {}
