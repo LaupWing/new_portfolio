@@ -4,7 +4,20 @@ import { Project } from "typings"
 
 const ProjectDetail:NextPage<{project: Project}> = ({ project }) => {
    console.log(project)
-   return <div>ProjectDetail</div>
+   return (
+      <div className="flex flex-col">
+         <div className="flex">
+            {project.skills.map((s, i) => (
+               null
+               // <Skill
+               //    index={i}
+               //    key={i}
+               //    name={s}
+               // />
+            ))}
+         </div>
+      </div>
+   )
 }
 export default ProjectDetail
 
