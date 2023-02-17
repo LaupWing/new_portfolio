@@ -5,11 +5,6 @@ const initialState = {
    darkMode: false
 }
 
-if(typeof window !== "undefined"){
-   console.log("window")
-   console.log(window)
-}
-
 export const themeSlice = createSlice({
    name: "user",
    initialState,

@@ -3,6 +3,7 @@ import { client } from "src/sanity"
 import { Project } from "typings"
 
 const ProjectDetail:NextPage<{project: Project}> = ({ project }) => {
+   console.log(project)
    return <div>ProjectDetail</div>
 }
 export default ProjectDetail
