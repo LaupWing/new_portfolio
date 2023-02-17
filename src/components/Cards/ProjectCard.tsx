@@ -20,7 +20,6 @@ const projectVariant: Variants = {
 export const ProjectCard:React.FC<Props> = ({ project }) => {
    const [hover, setHover] = useState(false) 
    const {darkMode} = useAppSelector(state => state.theme)
-   console.log(project)
    
    return (
       <Link href={`/projects/${project.slug.current}`}>
