@@ -9,7 +9,6 @@ import { TextLabel } from "../Elements"
 
 interface Props {
    project: Project
-   active_skills: string[]
 }
 
 const projectVariant: Variants = {
