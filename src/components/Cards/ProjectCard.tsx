@@ -6,6 +6,7 @@ import { Project, Skills } from "typings"
 import icons from "src/utils/skills"
 import { AiFillEye, AiFillGithub } from "react-icons/ai"
 import { TextLabel } from "../Elements"
+import Link from "next/link"
 
 interface Props {
    project: Project
@@ -19,73 +20,76 @@ const projectVariant: Variants = {
 export const ProjectCard:React.FC<Props> = ({ project }) => {
    const [hover, setHover] = useState(false) 
    const {darkMode} = useAppSelector(state => state.theme)
+   console.log(project)
    
    return (
-      <motion.div
-         className={`overflow-hidden relative duration-200 max-w-sm p-4 rounded-2xl ${
-            darkMode 
-               ? "bg-background-secundair border-accent border text-accent" 
-               : "bg-emerald-300 border-2 border-black sm:hover:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] shadow-[10px_10px_0px_2px_rgba(0,0,0,1)]" 
-            }`
-         }
-         onMouseOver={()=> {
-            if(window.innerWidth >= 640){
-               setHover(true)
+      <Link href={`/projects/${project.slug.current}`}>
+         <motion.div
+            className={`overflow-hidden relative duration-200 max-w-sm p-4 rounded-2xl ${
+               darkMode 
+                  ? "bg-background-secundair border-accent border text-accent" 
+                  : "bg-emerald-300 border-2 border-black sm:hover:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] shadow-[10px_10px_0px_2px_rgba(0,0,0,1)]" 
+               }`
             }
-         }}
-         onMouseOut={()=> setHover(false)}
-         onClick={() => {
-            setHover(false)
-         }}
-         variants={projectVariant}
-      >
-         {hover && <ProjectCardOverlay/>}
-         <div
-            className="relative"
-            style={{
-               paddingBottom: "115%",
+            onMouseOver={()=> {
+               if(window.innerWidth >= 640){
+                  setHover(true)
+               }
             }}
+            onMouseOut={()=> setHover(false)}
+            onClick={() => {
+               setHover(false)
+            }}
+            variants={projectVariant}
          >
-            <div className={"absolute inset-0 duration-500 flex flex-col justify-between " + (hover ? "blur" : "" )}>
-               <div className="flex items-start justify-between">
-                  <div className="flex">
-                     {project.skills.map((s, i) => (
-                        <Skill
-                           index={i}
-                           key={i}
-                           name={s}
-                        />
-                     ))}
+            {hover && <ProjectCardOverlay/>}
+            <div
+               className="relative"
+               style={{
+                  paddingBottom: "115%",
+               }}
+            >
+               <div className={"absolute inset-0 duration-500 flex flex-col justify-between " + (hover ? "blur" : "" )}>
+                  <div className="flex items-start justify-between">
+                     <div className="flex">
+                        {project.skills.map((s, i) => (
+                           <Skill
+                              index={i}
+                              key={i}
+                              name={s}
+                           />
+                        ))}
+                     </div>
+                     {  project.tutorial 
+                        ? (
+                           <TextLabel className="bg-indigo-500">
+                              tutorial
+                           </TextLabel>
+                        )
+                        :  (
+                           <TextLabel className="bg-teal-500">
+                              Self
+                           </TextLabel>
+                        )}
                   </div>
-                  {  project.tutorial 
-                     ? (
-                        <TextLabel className="bg-indigo-500">
-                           tutorial
-                        </TextLabel>
-                     )
-                     :  (
-                        <TextLabel className="bg-teal-500">
-                           Self
-                        </TextLabel>
-                     )}
-               </div>
-               <h1 className="font-serif text-xl tracking-wider">
-                  {project.name}
-               </h1>
-               <p className="text-xs mt-1 line-clamp-3">
-                  {project.description}
-               </p>
-               <div className="relative mt-4">
-                  <p className="absolute rounded-tl-md rounded-br-md bg-opacity-80  top-0 left-0 text-indigo-500 bg-white px-2 text-sm shadow">{project.date}</p>
-                  <img
-                     src={urlFor(project.images[0]).url()}
-                     className="aspect-video w-full object-cover rounded"
-                     alt="Project image"
-                  />
+                  <h1 className="font-serif text-xl tracking-wider">
+                     {project.name}
+                  </h1>
+                  <p className="text-xs mt-1 line-clamp-3">
+                     {project.description}
+                  </p>
+                  <div className="relative mt-4">
+                     <p className="absolute rounded-tl-md rounded-br-md bg-opacity-80  top-0 left-0 text-indigo-500 bg-white px-2 text-sm shadow">{project.date}</p>
+                     <img
+                        src={urlFor(project.images[0]).url()}
+                        className="aspect-video w-full object-cover rounded"
+                        alt="Project image"
+                     />
+                  </div>
                </div>
             </div>
-         </div>
-      </motion.div>
+         </motion.div>
+      </Link>
    )
 }
 

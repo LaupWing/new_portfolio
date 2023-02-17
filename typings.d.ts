@@ -20,4 +20,7 @@ export interface Project {
    credentials?: boolean
    username?: string
    password?: string
+   slug: {
+      current: string
+   }
 }
