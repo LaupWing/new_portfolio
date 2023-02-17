@@ -18,6 +18,15 @@ export default defineType({
          description: "Description of the project",
       }),
       defineField({
+         name: "slug",
+         title: "slug",
+         type: "slug",
+         options: {
+            source: "name",
+            maxLength: 200
+         }
+      }),
+      defineField({
          name: "date",
          title: "Date",
          type: "date",
