@@ -1,9 +1,11 @@
 import {defineField, defineType} from "sanity"
+import { CgBrowser as icon } from "react-icons/cg"
 
 export default defineType({
    name: "projects",
    title: "Projects",
    type: "document",
+   icon,
    fields: [
       defineField({
          name: "name",
